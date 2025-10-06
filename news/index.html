@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity News & Threat Intelligence - HifaazatiTech</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0a0f1c 0%, #1a1f35 100%);
+            color: #e0e6ed;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(110, 231, 255, 0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6ee7ff 0%, #7c4dff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: #e0e6ed;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: #6ee7ff;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #6ee7ff 0%, #7c4dff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 3rem;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .news-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(110, 231, 255, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            border-color: #6ee7ff;
+            box-shadow: 0 10px 30px rgba(110, 231, 255, 0.2);
+        }
+        
+        .news-card h2 {
+            color: #6ee7ff;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .news-date {
+            color: #7c4dff;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .news-excerpt {
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .read-more {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background: linear-gradient(135deg, #6ee7ff 0%, #7c4dff 100%);
+            color: #0a0f1c;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .read-more:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(110, 231, 255, 0.4);
+        }
+        
+        .alert-banner {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(220, 38, 38, 0.2) 100%);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .alert-banner h3 {
+            color: #fca5a5;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background: rgba(15, 23, 42, 0.8);
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(110, 231, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">HifaazatiTech</div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../tools.html">Tools</a></li>
+                <li><a href="../guides/">Guides</a></li>
+                <li><a href="index.html">News</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>🔒 Cybersecurity News & Threat Intelligence</h1>
+        <p class="subtitle">Stay informed with the latest security advisories, threat reports, and industry news. Updated bi-weekly.</p>
+        
+        <div class="alert-banner">
+            <h3>⚠️ Critical Security Alerts</h3>
+            <p>Check our latest threat intelligence report for critical vulnerabilities requiring immediate attention.</p>
+        </div>
+        
+        <div class="news-grid">
+            <article class="news-card">
+                <span class="news-date">📅 October 2025 - Latest</span>
+                <h2>Latest Cyber Threats 2025</h2>
+                <p class="news-excerpt">
+                    Comprehensive threat intelligence report covering critical CVEs, zero-day vulnerabilities, 
+                    APT group activities, ransomware campaigns, and security advisories. Updated bi-weekly with 
+                    actionable insights for security teams.
+                </p>
+                <a href="latest-threats-2025.md" class="read-more">Read Full Report →</a>
+            </article>
+            
+            <article class="news-card">
+                <span class="news-date">📅 Coming Soon</span>
+                <h2>Supply Chain Security Update</h2>
+                <p class="news-excerpt">
+                    Analysis of recent supply chain attacks and mitigation strategies. Learn how to protect 
+                    your organization from third-party vulnerabilities and software supply chain compromises.
+                </p>
+                <a href="#" class="read-more">Coming Soon</a>
+            </article>
+            
+            <article class="news-card">
+                <span class="news-date">📅 Coming Soon</span>
+                <h2>Cloud Security Trends 2025</h2>
+                <p class="news-excerpt">
+                    Insights into emerging cloud security threats, best practices for AWS, Azure, and GCP, 
+                    and recommendations for securing multi-cloud environments.
+                </p>
+                <a href="#" class="read-more">Coming Soon</a>
+            </article>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 HifaazatiTech. All rights reserved. | Empowering organizations with cutting-edge cybersecurity solutions.</p>
+    </footer>
+</body>
+</html>
