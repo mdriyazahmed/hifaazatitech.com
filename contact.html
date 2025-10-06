@@ -1,62 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us • Hifaazati Technologies</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{ --bg:#0b1220; --card:#0f1629; --grad1:#667eea; --grad2:#764ba2; --text:#e9eefc }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#0b1220;color:var(--text)}
-    header{position:sticky;top:0;z-index:20;background:rgba(11,18,32,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
-    nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;flex-wrap:wrap}
-    .logo{display:flex;gap:.6rem;align-items:center;font-weight:800}
-    .logo-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--grad1),var(--grad2));display:grid;place-items:center}
-    .nav-links{display:flex;gap:1.25rem;flex-wrap:wrap}
-    .nav-links a{color:var(--text);text-decoration:none;opacity:.9;padding:.5rem}
-    .nav-links a:hover{opacity:1}
-    .hero{max-width:1200px;margin:0 auto;padding:3rem 2rem}
-    h1{margin:0 0 .75rem}
-    p.lead{color:#cfe0ff;max-width:65ch}
-    .content{max-width:1200px;margin:0 auto;padding:2rem}
-    footer{border-top:1px solid rgba(255,255,255,.06);padding:2rem;text-align:center;color:#9fb0d1}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Hifaazati Technologies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        /* Unified Navigation Bar */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            background: white;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #1e3c72;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #2a5298;
+            text-align: center;
+        }
+        
+        .contact-card h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .contact-card p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-card .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1e3c72;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Map Section */
+        .map-section {
+            background: #e9ecef;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            color: #666;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        footer p {
+            margin: 0.5rem 0;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo"><div class="logo-badge">H</div>Hifaazati</div>
-      <div class="nav-links">
-        <a href="/index.html">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/services.html">Services</a>
-        <a href="/blog.html">Blog</a>
-        <a href="/resources.html">Resources</a>
-        <a href="/case-studies.html">Case Studies</a>
-        <a href="/tools.html">Tools</a>
-        <a href="/glossary.html">Glossary</a>
-        <a href="/guides/">Guides</a>
-        <a href="/news/">News</a>
-        <a href="/careers.html">Careers</a>
-        <a href="/contact.html" aria-current="page">Contact</a>
-      </div>
-    </nav>
-  </header>
-  <section class="hero">
-    <h1>Contact Us</h1>
-    <p class="lead">Get in touch with our cybersecurity experts. We're here to help secure your organization.</p>
-  </section>
-  <main class="content">
-    <h2>Get In Touch</h2>
-    <p>Email: info@hifaazati.com</p>
-    <p>Phone: +1 (555) 123-4567</p>
-    <p>Address: 123 Security Street, Cyber City, CC 12345</p>
-  </main>
-  <footer>
-    <p>© 2025 Hifaazati Technologies</p>
-  </footer>
+    <header>
+        <nav>
+            <a class="logo" href="index.html">Hifaazati Technologies</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="guides/index.html">Guides</a></li>
+                <li><a href="tutorials/index.html">Tutorials</a></li>
+                <li><a href="news/index.html">News</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="hero">
+        <h1>Contact Us</h1>
+        <p>Get in touch with our cybersecurity experts. We're here to help secure your organization.</p>
+    </div>
+    
+    <div class="container">
+        <section>
+            <h2>Get In Touch</h2>
+            <p>Ready to strengthen your cybersecurity posture? Our team of experts is here to help you navigate the complex world of cybersecurity threats and solutions.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="icon">📧</div>
+                    <h3>Email</h3>
+                    <p><strong>General Inquiries:</strong><br/>info@hifaazatitech.com</p>
+                    <p><strong>Sales:</strong><br/>sales@hifaazatitech.com</p>
+                    <p><strong>Support:</strong><br/>support@hifaazatitech.com</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="icon">📞</div>
+                    <h3>Phone</h3>
+                    <p><strong>Main Office:</strong><br/>+1 (555) 123-4567</p>
+                    <p><strong>Emergency Hotline:</strong><br/>+1 (555) 911-HELP</p>
+                    <p><strong>Business Hours:</strong><br/>Mon-Fri: 8AM-6PM EST</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="icon">📍</div>
+                    <h3>Office</h3>
+                    <p><strong>Headquarters:</strong></p>
+                    <p>123 Security Street<br/>Cyber City, CC 12345<br/>United States</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Send us a Message</h2>
+            <p>Have a specific question or need a custom cybersecurity solution? Fill out the form below and we'll get back to you within 24 hours.</p>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company/Organization</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your cybersecurity needs, current challenges, or questions..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+        
+        <section>
+            <h2>Visit Our Office</h2>
+            <div class="map-section">
+                <h3>Hifaazati Technologies Headquarters</h3>
+                <p>123 Security Street, Cyber City, CC 12345</p>
+                <p style="margin-top: 1rem; font-style: italic;">[Interactive map would be embedded here]</p>
+                <p style="margin-top: 1rem;">Our office is located in the heart of the cybersecurity district, easily accessible by public transportation and with parking available on-site.</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Emergency Response</h2>
+            <div class="contact-card" style="background: #ffe6e6; border-left-color: #dc3545;">
+                <div class="icon" style="color: #dc3545;">🆘</div>
+                <h3 style="color: #dc3545;">24/7 Incident Response</h3>
+                <p>If you're experiencing an active cybersecurity incident, contact our emergency response team immediately:</p>
+                <p style="font-size: 1.2rem; font-weight: bold; margin: 1rem 0;">+1 (555) 911-HELP</p>
+                <p>Our incident response team is available 24/7/365 to help contain threats, minimize damage, and restore normal operations.</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© 2025 Hifaazati Technologies. All rights reserved.</p>
+        <p>Securing your digital world, one solution at a time.</p>
+    </footer>
 </body>
 </html>
