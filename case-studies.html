@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Studies • Hifaazati Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#0b1220; --card:#0f1629; --grad1:#667eea; --grad2:#764ba2; --text:#e9eefc }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#0b1220;color:var(--text)}
+    header{position:sticky;top:0;z-index:20;background:rgba(11,18,32,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem}
+    .logo{display:flex;gap:.6rem;align-items:center;font-weight:800}
+    .logo-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--grad1),var(--grad2));display:grid;place-items:center}
+    .nav-links{display:flex;gap:1.25rem}
+    .nav-links a{color:var(--text);text-decoration:none;opacity:.9}
+    .section{max-width:1200px;margin:0 auto;padding:3rem 2rem}
+    h1{margin:0 0 .75rem}
+    p.lead{color:#cfe0ff;max-width:65ch}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.25rem;margin-top:1rem}
+    .card{background:#0f1629;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:1.25rem}
+    .meta{color:#9fb0d1;font-size:.9rem}
+    .btn{display:inline-block;background:linear-gradient(135deg,var(--grad1),var(--grad2));color:white;border:none;border-radius:10px;padding:.55rem .9rem;text-decoration:none;font-weight:600}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:2rem;text-align:center;color:#9fb0d1}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"><div class="logo-badge">H</div><span>Hifaazati</span></div>
+      <div class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/services.html">Services</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/resources.html">Resources</a>
+        <a aria-current="page" href="/case-studies.html">Case Studies</a>
+        <a href="/careers.html">Careers</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h1>Client Success Stories</h1>
+    <p class="lead">Five engagements that demonstrate measurable risk reduction, faster detection, and resilient recovery.</p>
+    <div class="grid">
+      <article class="card">
+        <h3>Fintech: Ransomware Containment in 6 Hours</h3>
+        <p class="meta">Industry: Financial Services • Scope: IR + Recovery</p>
+        <p>We contained lateral movement, restored Tier-0 identity, and brought core payments back online with validated backups and golden images.</p>
+      </article>
+      <article class="card">
+        <h3>Retail: PCI DSS 4.0 in 120 Days</h3>
+        <p class="meta">Industry: Retail • Scope: Compliance & Risk</p>
+        <p>Closed 87 control gaps, implemented network segmentation, and passed ROC on first attempt with continuous evidence collection.</p>
+      </article>
+      <article class="card">
+        <h3>Healthcare: Zero Trust Identity</h3>
+        <p class="meta">Industry: Healthcare • Scope: Identity & Access</p>
+        <p>Migrated to SSO with phishing-resistant MFA, privileged access workflows, and device trust—cutting account takeovers by 92%.</p>
+      </article>
+      <article class="card">
+        <h3>SaaS: Detection Engineering</h3>
+        <p class="meta">Industry: Software • Scope: MDR + Detection</p>
+        <p>Built telemetry pipelines, unit-tested detections, and a release process; reduced false positives 48% and MTTD to under 6 minutes.</p>
+      </article>
+      <article class="card">
+        <h3>Energy: Cloud Security Guardrails</h3>
+        <p class="meta">Industry: Energy • Scope: Cloud Security</p>
+        <p>Deployed landing zones, SCPs, network egress controls, and IaC validation to eliminate misconfigurations and shadow resources.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer>© 2025 Hifaazati Technologies</footer>
+</body>
+</html>
