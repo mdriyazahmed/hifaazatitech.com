@@ -15,81 +15,100 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            background-color: #f4f4f4;
         }
         
+        /* Unified Navigation Bar */
         header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
             padding: 1rem 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         
         nav {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 2rem;
+            flex-wrap: wrap;
         }
         
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
+            color: white;
+            text-decoration: none;
         }
         
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
+            flex-wrap: wrap;
         }
         
         nav a {
             color: white;
             text-decoration: none;
-            transition: opacity 0.3s;
+            transition: all 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
         }
         
         nav a:hover {
-            opacity: 0.8;
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
         }
         
+        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
-            padding: 5rem 2rem;
+            padding: 4rem 2rem;
         }
         
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
         
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             max-width: 800px;
             margin: 0 auto;
         }
         
+        /* Container */
         .container {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
+            margin: 2rem auto;
+            padding: 0 2rem;
         }
         
         section {
-            margin-bottom: 3rem;
+            background: white;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         h2 {
             color: #1e3c72;
+            font-size: 2.5rem;
             margin-bottom: 1.5rem;
-            font-size: 2rem;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #2a5298;
             padding-bottom: 0.5rem;
         }
         
+        /* Services Grid */
         .services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -101,19 +120,22 @@
             background: #f8f9fa;
             padding: 2rem;
             border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #2a5298;
             transition: transform 0.3s;
         }
         
         .service-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
         .service-card h3 {
-            color: #2a5298;
+            color: #1e3c72;
             margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
         
+        /* Footer */
         footer {
             background: #1e3c72;
             color: white;
@@ -121,20 +143,24 @@
             padding: 2rem;
             margin-top: 3rem;
         }
+        
+        footer p {
+            margin: 0.5rem 0;
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo"><a href="index.html" style="color: white; text-decoration: none;">Hifaazati Technologies</a></div>
+            <a href="index.html" class="logo">Hifaazati Technologies</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="guides/">Guides</a></li>
-                <li><a href="tutorials/">Tutorials</a></li>
-                <li><a href="news/">News</a></li>
+                <li><a href="guides/index.html">Guides</a></li>
+                <li><a href="tutorials/index.html">Tutorials</a></li>
+                <li><a href="news/index.html">News</a></li>
                 <li><a href="tools.html">Tools</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="case-studies.html">Case Studies</a></li>
@@ -144,10 +170,12 @@
             </ul>
         </nav>
     </header>
-    <section class="hero" id="home">
+
+    <div class="hero">
         <h1>Welcome to Hifaazati Technologies</h1>
         <p>Your Trusted Partner in Cybersecurity Solutions - Protecting Your Digital Assets with Cutting-Edge Security Services</p>
-    </section>
+    </div>
+
     <div class="container">
         <section id="about">
             <h2>About Us</h2>
@@ -155,6 +183,7 @@
             <br>
             <p><strong>Our Mission:</strong> To provide world-class cybersecurity services that empower organizations to operate securely in the digital age.</p>
         </section>
+
         <section id="services">
             <h2>Our Services</h2>
             <div class="services">
@@ -184,6 +213,7 @@
                 </div>
             </div>
         </section>
+
         <section id="contact">
             <h2>Contact Us</h2>
             <p>Ready to secure your digital future? Get in touch with our team of cybersecurity experts.</p>
@@ -193,6 +223,7 @@
             <p><strong>Location:</strong> Serving clients worldwide</p>
         </section>
     </div>
+
     <footer>
         <p>© 2025 Hifaazati Technologies. All rights reserved.</p>
         <p>Securing your digital world, one solution at a time.</p>
