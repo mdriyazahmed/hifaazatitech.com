@@ -3,9 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cybersecurity Tools - HifaazatiTech</title>
+  <title>Cybersecurity Tools - Hifaazati Technologies</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f4; }
+    header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+    nav { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; flex-wrap: wrap; }
+    .logo { font-size: 1.5rem; font-weight: bold; color: white; text-decoration: none; }
+    nav ul { display: flex; list-style: none; gap: 1.0rem; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; transition: all 0.3s; padding: 0.4rem 0.7rem; border-radius: 4px; }
+    nav a:hover { background-color: rgba(255,255,255,0.2); transform: translateY(-1px); }
+    .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 3rem 2rem; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 0.6rem; }
+    .hero p { font-size: 1.1rem; max-width: 900px; margin: 0 auto; opacity: 0.95; }
+    .container { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
+    section { background: white; padding: 2rem; margin-bottom: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+    h2 { color: #1e3c72; font-size: 2rem; margin-bottom: 1rem; border-bottom: 3px solid #2a5298; padding-bottom: 0.4rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+    .card { background: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid #2a5298; display: grid; gap: .5rem; }
+    .card h3 { margin: 0; color: #1e3c72; }
+    .card p { margin: 0; color: #444; }
+    .badge { display: inline-block; background: #e9f1ff; color: #1e3c72; border: 1px solid #cdddfc; border-radius: 99px; font-size: .8rem; padding: .15rem .5rem; }
+    footer { background: #1e3c72; color: white; text-align: center; padding: 1.5rem; margin-top: 2rem; }
+  </style>
 </head>
 <body>
-<!-- content inserted above -->
+  <header>
+    <nav>
+      <a class="logo" href="index.html">Hifaazati Technologies</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="guides/index.html">Guides</a></li>
+        <li><a href="tutorials/index.html">Tutorials</a></li>
+        <li><a href="news/index.html">News</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Cybersecurity Tools</h1>
+    <p>Curated utilities for assessment, monitoring, response, and hardening—updated regularly.</p>
+  </div>
+
+  <div class="container">
+    <section>
+      <h2>Assessment</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Nmap <span class="badge">Network</span></h3>
+          <p>Network discovery and security auditing. Profiles open ports and services.</p>
+          <p><strong>Command:</strong> nmap -sC -sV -Pn target</p>
+        </div>
+        <div class="card">
+          <h3>OWASP ZAP <span class="badge">Web</span></h3>
+          <p>Intercepting proxy and scanner for web application security testing.</p>
+          <p><strong>Use:</strong> Passive scan during exploratory testing; CI baseline scans.</p>
+        </div>
+        <div class="card">
+          <h3>Trivy <span class="badge">Containers</span></h3>
+          <p>Scanner for container images, file systems, and IaC misconfigurations.</p>
+          <p><strong>CI:</strong> trivy image --severity HIGH,CRITICAL repo/image:tag</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Monitoring</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Wazuh <span class="badge">XDR/SIEM</span></h3>
+          <p>Open-source security platform for endpoint monitoring and incident detection.</p>
+          <p><strong>Tip:</strong> Centralize agent logs and enable FIM + vulnerability DB sync.</p>
+        </div>
+        <div class="card">
+          <h3>Prometheus + Grafana <span class="badge">Metrics</span></h3>
+          <p>Time-series metrics and visualization for infra and app SLOs.</p>
+          <p><strong>Alerting:</strong> Define thresholds for auth failures and error spikes.</p>
+        </div>
+        <div class="card">
+          <h3>Zeek <span class="badge">Network</span></h3>
+          <p>Network security monitoring framework generating rich protocol logs.</p>
+          <p><strong>Parse:</strong> Ship logs to SIEM for correlation and detections.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Response</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Velociraptor <span class="badge">DFIR</span></h3>
+          <p>Endpoint visibility and collection through VQL. Ideal for threat hunting.</p>
+          <p><strong>Playbook:</strong> Snapshot triage: processes, persistence, netconns, autoruns.</p>
+        </div>
+        <div class="card">
+          <h3>Cyber Triage <span class="badge">IR</span></h3>
+          <p>Guided triage of compromised hosts with scoring of suspicious artifacts.</p>
+          <p><strong>Export:</strong> Generate case bundle for chain-of-custody.</p>
+        </div>
+        <div class="card">
+          <h3>YARA <span class="badge">Detection</span></h3>
+          <p>Pattern matching for malware and IOC hunting across file systems/memory.</p>
+          <p><strong>Rule:</strong> use meta + strings + condition; test on benign samples.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Hardening</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>OpenSCAP <span class="badge">Compliance</span></h3>
+          <p>Audit and remediate systems against CIS/SCAP benchmarks.</p>
+          <p><strong>CLI:</strong> oscap xccdf eval --profile xccdf_org.ssgproject.content_profile_cis</p>
+        </div>
+        <div class="card">
+          <h3>tfsec <span class="badge">IaC</span></h3>
+          <p>Static analysis for Terraform to catch insecure defaults pre-deploy.</p>
+          <p><strong>CI:</strong> tfsec . --soft-fail for gradual adoption.</p>
+        </div>
+        <div class="card">
+          <h3>Dependabot <span class="badge">Supply Chain</span></h3>
+          <p>Automated dependency updates with security advisories in pull requests.</p>
+          <p><strong>Tip:</strong> Require passing security tests before merge.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    © 2025 Hifaazati Technologies. All rights reserved.
+  </footer>
 </body>
 </html>
