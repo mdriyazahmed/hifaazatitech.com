@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources • Hifaazati Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#0b1220; --card:#0f1629; --grad1:#667eea; --grad2:#764ba2; --text:#e9eefc }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#0b1220;color:var(--text)}
+    header{position:sticky;top:0;z-index:20;background:rgba(11,18,32,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem}
+    .logo{display:flex;gap:.6rem;align-items:center;font-weight:800}
+    .logo-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--grad1),var(--grad2));display:grid;place-items:center}
+    .nav-links{display:flex;gap:1.25rem}
+    .nav-links a{color:var(--text);text-decoration:none;opacity:.9}
+    .section{max-width:1200px;margin:0 auto;padding:3rem 2rem}
+    h1{margin:0 0 .75rem}
+    p.lead{color:#cfe0ff;max-width:65ch}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:1rem}
+    .card{background:#0f1629;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:1.25rem}
+    .btn{display:inline-block;background:linear-gradient(135deg,var(--grad1),var(--grad2));color:white;border:none;border-radius:10px;padding:.55rem .9rem;text-decoration:none;font-weight:600}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:2rem;text-align:center;color:#9fb0d1}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"><div class="logo-badge">H</div><span>Hifaazati</span></div>
+      <div class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/services.html">Services</a>
+        <a href="/blog.html">Blog</a>
+        <a aria-current="page" href="/resources.html">Resources</a>
+        <a href="/careers.html">Careers</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h1>Resources Library</h1>
+    <p class="lead">Tools, frameworks, datasheets, and media to help you mature your security program.</p>
+
+    <h2>Popular Tools</h2>
+    <div class="grid">
+      <div class="card"><h3>Threat Modeling Kit</h3><p>Lightweight STRIDE/LINDDUN templates and examples.</p><a class="btn" href="/assets/datasheets/threat-modeling-kit.pdf">Download PDF</a></div>
+      <div class="card"><h3>MFA Rollout Playbook</h3><p>From pilot to org-wide rollout with helpdesk scripts.</p><a class="btn" href="/assets/datasheets/mfa-rollout-playbook.pdf">Download PDF</a></div>
+      <div class="card"><h3>Zero Trust Quickstart</h3><p>Reference architecture and policy baselines.</p><a class="btn" href="/assets/datasheets/zero-trust-quickstart.pdf">Download PDF</a></div>
+    </div>
+
+    <h2>Framework Mappings</h2>
+    <div class="grid">
+      <div class="card"><h3>NIST CSF 2.0</h3><p>Control mappings to modern cloud-native environments.</p><a class="btn" href="/assets/datasheets/nist-csf-2.0-cloud.pdf">Download PDF</a></div>
+      <div class="card"><h3>MITRE ATT&amp;CK</h3><p>Detection ideas and coverage matrix for SOC teams.</p><a class="btn" href="/assets/datasheets/mitre-attack-detections.pdf">Download PDF</a></div>
+      <div class="card"><h3>PCI DSS 4.0</h3><p>Gap analysis checklist and auditor-ready evidence list.</p><a class="btn" href="/assets/datasheets/pci-dss-4-gap-checklist.pdf">Download PDF</a></div>
+    </div>
+
+    <h2>Videos and Webinars</h2>
+    <div class="grid">
+      <div class="card"><h3>Incident Response 101</h3><p>45-minute walkthrough of IR phases and pitfalls.</p><a class="btn" href="/assets/videos/ir-101.mp4">Watch MP4</a></div>
+      <div class="card"><h3>Hardening Identities</h3><p>SSO, MFA, device trust, and just-in-time access.</p><a class="btn" href="/assets/videos/identity-hardening.mp4">Watch MP4</a></div>
+      <div class="card"><h3>Cloud Security Posture</h3><p>Guardrails, IaC scanning, and continuous validation.</p><a class="btn" href="/assets/videos/cloud-posture.mp4">Watch MP4</a></div>
+    </div>
+  </section>
+
+  <footer>© 2025 Hifaazati Technologies</footer>
+</body>
+</html>
