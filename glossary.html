@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Glossary - HifaazatiTech</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0f23, #1a1a2e, #16213e);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .header-title {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .search-container {
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .search-box::placeholder {
+            color: #cccccc;
+        }
+        
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .glossary-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .glossary-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: #4ecdc4;
+        }
+        
+        .glossary-term {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            margin-bottom: 10px;
+        }
+        
+        .glossary-definition {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+        
+        .alpha-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            gap: 10px;
+        }
+        
+        .alpha-nav button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .alpha-nav button:hover {
+            background: #4ecdc4;
+            transform: scale(1.1);
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="header-title">Cybersecurity Glossary</h1>
+            <p>Comprehensive dictionary of cybersecurity terms and definitions</p>
+        </header>
+        
+        <div class="search-container">
+            <input type="text" class="search-box" id="searchBox" placeholder="Search for cybersecurity terms...">
+        </div>
+        
+        <div class="alpha-nav">
+            <button onclick="filterByLetter('all')">All</button>
+            <button onclick="filterByLetter('A')">A</button>
+            <button onclick="filterByLetter('B')">B</button>
+            <button onclick="filterByLetter('C')">C</button>
+            <button onclick="filterByLetter('D')">D</button>
+            <button onclick="filterByLetter('E')">E</button>
+            <button onclick="filterByLetter('F')">F</button>
+            <button onclick="filterByLetter('G')">G</button>
+            <button onclick="filterByLetter('H')">H</button>
+            <button onclick="filterByLetter('I')">I</button>
+            <button onclick="filterByLetter('M')">M</button>
+            <button onclick="filterByLetter('P')">P</button>
+            <button onclick="filterByLetter('S')">S</button>
+            <button onclick="filterByLetter('V')">V</button>
+            <button onclick="filterByLetter('Z')">Z</button>
+        </div>
+        
+        <div class="glossary-grid" id="glossaryGrid">
+            <!-- APT -->
+            <div class="glossary-item" data-letter="A">
+                <div class="glossary-term">Advanced Persistent Threat (APT)</div>
+                <div class="glossary-definition">A prolonged and targeted cyberattack where an intruder gains access to a network and remains undetected for an extended period while stealing data.</div>
+            </div>
+            
+            <!-- Authentication -->
+            <div class="glossary-item" data-letter="A">
+                <div class="glossary-term">Authentication</div>
+                <div class="glossary-definition">The process of verifying the identity of a user, device, or system before granting access to resources.</div>
+            </div>
+            
+            <!-- Botnet -->
+            <div class="glossary-item" data-letter="B">
+                <div class="glossary-term">Botnet</div>
+                <div class="glossary-definition">A network of compromised computers controlled remotely by cybercriminals to perform malicious activities.</div>
+            </div>
+            
+            <!-- CISO -->
+            <div class="glossary-item" data-letter="C">
+                <div class="glossary-term">Chief Information Security Officer (CISO)</div>
+                <div class="glossary-definition">Senior-level executive responsible for developing and implementing an organization's information security strategy.</div>
+            </div>
+            
+            <!-- DDoS -->
+            <div class="glossary-item" data-letter="D">
+                <div class="glossary-term">Distributed Denial of Service (DDoS)</div>
+                <div class="glossary-definition">A cyberattack that attempts to make a service unavailable by overwhelming it with traffic from multiple sources.</div>
+            </div>
+            
+            <!-- Encryption -->
+            <div class="glossary-item" data-letter="E">
+                <div class="glossary-term">Encryption</div>
+                <div class="glossary-definition">The process of converting readable data into coded form to prevent unauthorized access during transmission or storage.</div>
+            </div>
+            
+            <!-- Firewall -->
+            <div class="glossary-item" data-letter="F">
+                <div class="glossary-term">Firewall</div>
+                <div class="glossary-definition">A network security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules.</div>
+            </div>
+            
+            <!-- Honeypot -->
+            <div class="glossary-item" data-letter="H">
+                <div class="glossary-term">Honeypot</div>
+                <div class="glossary-definition">A security mechanism that creates a trap to detect, deflect, or study attempts at unauthorized network access.</div>
+            </div>
+            
+            <!-- Incident Response -->
+            <div class="glossary-item" data-letter="I">
+                <div class="glossary-term">Incident Response</div>
+                <div class="glossary-definition">The organized approach to addressing and managing security breaches or cyberattacks, including preparation, detection, and recovery.</div>
+            </div>
+            
+            <!-- Malware -->
+            <div class="glossary-item" data-letter="M">
+                <div class="glossary-term">Malware</div>
+                <div class="glossary-definition">Malicious software designed to damage, disrupt, or gain unauthorized access to computer systems, including viruses, worms, and ransomware.</div>
+            </div>
+            
+            <!-- Penetration Testing -->
+            <div class="glossary-item" data-letter="P">
+                <div class="glossary-term">Penetration Testing</div>
+                <div class="glossary-definition">A simulated cyberattack against a computer system to check for exploitable vulnerabilities and assess security posture.</div>
+            </div>
+            
+            <!-- Phishing -->
+            <div class="glossary-item" data-letter="P">
+                <div class="glossary-term">Phishing</div>
+                <div class="glossary-definition">A cybercrime where attackers impersonate legitimate entities to steal sensitive information like usernames, passwords, and credit card details.</div>
+            </div>
+            
+            <!-- SIEM -->
+            <div class="glossary-item" data-letter="S">
+                <div class="glossary-term">Security Information and Event Management (SIEM)</div>
+                <div class="glossary-definition">A software solution that aggregates and analyzes activity from many different resources across an IT infrastructure.</div>
+            </div>
+            
+            <!-- SOC -->
+            <div class="glossary-item" data-letter="S">
+                <div class="glossary-term">Security Operations Center (SOC)</div>
+                <div class="glossary-definition">A centralized unit that deals with security issues on an organizational and technical level, monitoring and analyzing security events.</div>
+            </div>
+            
+            <!-- Vulnerability -->
+            <div class="glossary-item" data-letter="V">
+                <div class="glossary-term">Vulnerability</div>
+                <div class="glossary-definition">A weakness in a system that can be exploited by threats to gain unauthorized access or perform unauthorized actions.</div>
+            </div>
+            
+            <!-- Zero-day -->
+            <div class="glossary-item" data-letter="Z">
+                <div class="glossary-term">Zero-day Attack</div>
+                <div class="glossary-definition">A cyberattack that occurs on the same day a weakness is discovered in software, before a security patch is available.</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function searchTerms() {
+            const searchInput = document.getElementById('searchBox');
+            const filter = searchInput.value.toLowerCase();
+            const glossaryItems = document.querySelectorAll('.glossary-item');
+            
+            glossaryItems.forEach(item => {
+                const term = item.querySelector('.glossary-term').textContent.toLowerCase();
+                const definition = item.querySelector('.glossary-definition').textContent.toLowerCase();
+                
+                if (term.includes(filter) || definition.includes(filter)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        
+        function filterByLetter(letter) {
+            const glossaryItems = document.querySelectorAll('.glossary-item');
+            
+            glossaryItems.forEach(item => {
+                if (letter === 'all') {
+                    item.style.display = 'block';
+                } else if (item.dataset.letter === letter) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        
+        document.getElementById('searchBox').addEventListener('keyup', searchTerms);
+    </script>
+</body>
+</html>
