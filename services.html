@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services • Hifaazati Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#0b1220; --card:#0f1629; --grad1:#667eea; --grad2:#764ba2; --text:#e9eefc }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#0b1220;color:var(--text)}
+    header{position:sticky;top:0;z-index:20;background:rgba(11,18,32,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem}
+    .logo{display:flex;gap:.6rem;align-items:center;font-weight:800}
+    .logo-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--grad1),var(--grad2));display:grid;place-items:center}
+    .nav-links{display:flex;gap:1.25rem}
+    .nav-links a{color:var(--text);text-decoration:none;opacity:.9}
+    .hero{max-width:1200px;margin:0 auto;padding:3rem 2rem}
+    h1{margin:0 0 .75rem}
+    p.lead{color:#cfe0ff;max-width:65ch}
+    .grid{max-width:1200px;margin:0 auto;padding:1rem 2rem 3rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+    .card{background:#0f1629;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:1.25rem;display:flex;flex-direction:column;gap:.6rem}
+    .card h3{margin:.2rem 0}
+    .btn{align-self:flex-start;background:linear-gradient(135deg,var(--grad1),var(--grad2));color:white;border:none;border-radius:10px;padding:.55rem .9rem;text-decoration:none;font-weight:600}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:2rem;text-align:center;color:#9fb0d1}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"><div class="logo-badge">H</div><span>Hifaazati</span></div>
+      <div class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+        <a aria-current="page" href="/services.html">Services</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/careers.html">Careers</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Security Services engineered for measurable outcomes</h1>
+    <p class="lead">From strategy to 24/7 operations, our services reduce risk, detect threats earlier, and harden your environment with secure-by-design controls.</p>
+  </section>
+
+  <main class="grid">
+    <article class="card">
+      <h3>Security Assessment</h3>
+      <p>Comprehensive vulnerability assessments and penetration testing across web, mobile, network, cloud, and APIs.</p>
+      <a class="btn" href="/services/security-assessment.html">Learn more</a>
+    </article>
+    <article class="card">
+      <h3>Managed Security (MDR)</h3>
+      <p>24/7 SOC operations with threat hunting, detection engineering, and incident response.</p>
+      <a class="btn" href="/services/managed-security.html">Learn more</a>
+    </article>
+    <article class="card">
+      <h3>Compliance & Risk</h3>
+      <p>Framework alignment and audit preparation: ISO 27001, SOC 2, PCI DSS, HIPAA, GDPR, RBI.</p>
+      <a class="btn" href="/services/compliance-risk.html">Learn more</a>
+    </article>
+    <article class="card">
+      <h3>Security Training</h3>
+      <p>Role-based training for engineers, SOC analysts, and executives; phishing simulations.</p>
+      <a class="btn" href="/services/security-training.html">Learn more</a>
+    </article>
+    <article class="card">
+      <h3>Incident Response</h3>
+      <p>Retainer-backed IR with forensics, containment, eradication, and recovery playbooks.</p>
+      <a class="btn" href="/services/incident-response.html">Learn more</a>
+    </article>
+    <article class="card">
+      <h3>Cloud Security</h3>
+      <p>Secure landing zones, identity hardening, workload protection, and posture management.</p>
+      <a class="btn" href="/services/cloud-security.html">Learn more</a>
+    </article>
+  </main>
+
+  <footer>© 2025 Hifaazati Technologies</footer>
+</body>
+</html>
