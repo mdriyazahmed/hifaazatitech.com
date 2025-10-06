@@ -1,66 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guides • Hifaazati Technologies</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{ --bg:#0b1220; --card:#0f1629; --grad1:#667eea; --grad2:#764ba2; --text:#e9eefc }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#0b1220;color:var(--text)}
-    header{position:sticky;top:0;z-index:20;background:rgba(11,18,32,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
-    nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;flex-wrap:wrap}
-    .logo{display:flex;gap:.6rem;align-items:center;font-weight:800}
-    .logo-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--grad1),var(--grad2));display:grid;place-items:center}
-    .nav-links{display:flex;gap:1.25rem;flex-wrap:wrap}
-    .nav-links a{color:var(--text);text-decoration:none;opacity:.9;padding:.5rem}
-    .nav-links a:hover{opacity:1}
-    .hero{max-width:1200px;margin:0 auto;padding:3rem 2rem}
-    h1{margin:0 0 .75rem}
-    p.lead{color:#cfe0ff;max-width:65ch}
-    .grid{max-width:1200px;margin:0 auto;padding:1rem 2rem 3rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
-    .card{background:#0f1629;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:1.25rem;display:flex;flex-direction:column;gap:.6rem}
-    .card h3{margin:.2rem 0}
-    .btn{align-self:flex-start;background:linear-gradient(135deg,var(--grad1),var(--grad2));color:white;border:none;border-radius:10px;padding:.55rem .9rem;text-decoration:none;font-weight:600}
-    footer{border-top:1px solid rgba(255,255,255,.06);padding:2rem;text-align:center;color:#9fb0d1}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f4f4; color: #333; }
+    header { background: linear-gradient(135deg, #1e3c72, #2a5298); color: #fff; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 5px rgba(0,0,0,.1); }
+    nav { max-width: 1400px; margin: 0 auto; padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    .logo { font-weight: 700; font-size: 1.2rem; color: #fff; text-decoration: none; }
+    nav ul { list-style: none; display: flex; gap: .8rem; flex-wrap: wrap; }
+    nav a { color: #fff; text-decoration: none; padding: .4rem .6rem; border-radius: 4px; }
+    nav a:hover { background: rgba(255,255,255,.2); }
+    .hero { background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; padding: 3rem 2rem; text-align: center; }
+    .hero h1 { font-size: 2.2rem; margin-bottom: .5rem; }
+    .hero p { opacity: .95; }
+    .container { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
+    section { background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.08); padding: 1.5rem; }
+    h2 { color: #1e3c72; border-bottom: 3px solid #2a5298; padding-bottom: .4rem; margin-bottom: 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+    .card { background: #f8f9fa; border-left: 4px solid #2a5298; border-radius: 8px; padding: 1rem; display: grid; gap: .5rem; }
+    .card h3 { margin: 0; color: #1e3c72; }
+    .btn { justify-self: start; display: inline-block; background: linear-gradient(135deg, #1e3c72, #2a5298); color: #fff; padding: .45rem .8rem; border-radius: 6px; text-decoration: none; }
+    footer { background: #1e3c72; color: #fff; text-align: center; padding: 1.2rem; margin-top: 2rem; }
   </style>
 </head>
 <body>
   <header>
     <nav>
-      <div class="logo"><div class="logo-badge">H</div>Hifaazati</div>
-      <div class="nav-links">
-        <a href="/index.html">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/services.html">Services</a>
-        <a href="/blog.html">Blog</a>
-        <a href="/resources.html">Resources</a>
-        <a href="/case-studies.html">Case Studies</a>
-        <a href="/tools.html">Tools</a>
-        <a href="/glossary.html">Glossary</a>
-        <a href="/guides/" aria-current="page">Guides</a>
-        <a href="/news/">News</a>
-        <a href="/careers.html">Careers</a>
-        <a href="/contact.html">Contact</a>
-      </div>
+      <a class="logo" href="/index.html">Hifaazati Technologies</a>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/guides/index.html">Guides</a></li>
+        <li><a href="/tutorials/index.html">Tutorials</a></li>
+        <li><a href="/news/index.html">News</a></li>
+        <li><a href="/tools.html">Tools</a></li>
+        <li><a href="/resources.html">Resources</a></li>
+        <li><a href="/case-studies.html">Case Studies</a></li>
+        <li><a href="/glossary.html">Glossary</a></li>
+        <li><a href="/careers.html">Careers</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
-  <section class="hero">
+
+  <div class="hero">
     <h1>Security Guides</h1>
-    <p class="lead">In-depth technical guides for security professionals.</p>
-  </section>
-  <main class="grid">
-    <article class="card">
-      <h3>SIEM Deployment Guide</h3>
-      <p>Complete 8-week deployment plan with configurations</p>
-      <a class="btn" href="/guides/siem-deployment-guide.md">Read Guide</a>
-    </article>
-  </main>
+    <p>In-depth, practical guides for security engineers and program owners.</p>
+  </div>
+
+  <div class="container">
+    <section>
+      <h2>Featured Guides</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>SIEM Deployment Guide</h3>
+          <p>Eight-week plan with reference architectures, parsers, and detections.</p>
+          <a class="btn" href="/guides/siem-deployment-guide.md">Read Guide</a>
+        </article>
+      </div>
+    </section>
+  </div>
+
   <footer>
-    <p>© 2025 Hifaazati Technologies</p>
+    © 2025 Hifaazati Technologies. All rights reserved.
   </footer>
 </body>
 </html>
