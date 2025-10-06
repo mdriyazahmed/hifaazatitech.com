@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog • Hifaazati Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#0b1220; --card:#0f1629; --grad1:#667eea; --grad2:#764ba2; --text:#e9eefc }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#0b1220;color:var(--text)}
+    header{position:sticky;top:0;z-index:20;background:rgba(11,18,32,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem}
+    .logo{display:flex;gap:.6rem;align-items:center;font-weight:800}
+    .logo-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--grad1),var(--grad2));display:grid;place-items:center}
+    .nav-links{display:flex;gap:1.25rem}
+    .nav-links a{color:var(--text);text-decoration:none;opacity:.9}
+    .hero{max-width:1200px;margin:0 auto;padding:3rem 2rem}
+    h1{margin:0 0 .75rem}
+    p.lead{color:#cfe0ff;max-width:65ch}
+    .grid{max-width:1200px;margin:0 auto;padding:1rem 2rem 3rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+    .card{background:#0f1629;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:1.25rem;display:flex;flex-direction:column;gap:.6rem}
+    .card h3{margin:.2rem 0}
+    .btn{align-self:flex-start;background:linear-gradient(135deg,var(--grad1),var(--grad2));color:white;border:none;border-radius:10px;padding:.55rem .9rem;text-decoration:none;font-weight:600}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:2rem;text-align:center;color:#9fb0d1}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"><div class="logo-badge">H</div><span>Hifaazati</span></div>
+      <div class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/services.html">Services</a>
+        <a aria-current="page" href="/blog.html">Blog</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/careers.html">Careers</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Hifaazati Blog</h1>
+    <p class="lead">Insights from defenders, red teamers, and architects. Long-form analysis, guides, and case studies.</p>
+  </section>
+
+  <main class="grid">
+    <article class="card"><h3>Zero Trust in the Real World</h3><p>Design patterns, pitfalls, and a phased roadmap.</p><a class="btn" href="/blog/zero-trust-real-world.html">Read article</a></article>
+    <article class="card"><h3>Cloud Incident Response at Scale</h3><p>Automation, forensics, and containment in multi-account cloud.</p><a class="btn" href="/blog/cloud-incident-response-scale.html">Read article</a></article>
+    <article class="card"><h3>Building a Detection Engineering Program</h3><p>Signals, pipelines, testing, and reliability SLOs.</p><a class="btn" href="/blog/detection-engineering-program.html">Read article</a></article>
+    <article class="card"><h3>API Security from Design to Runtime</h3><p>Threat modeling, authZ, rate limiting, and runtime defenses.</p><a class="btn" href="/blog/api-security-design-runtime.html">Read article</a></article>
+    <article class="card"><h3>Ransomware Readiness</h3><p>Backups, segmentation, tabletop drills, and recovery.</p><a class="btn" href="/blog/ransomware-readiness.html">Read article</a></article>
+    <article class="card"><h3>Identity Threat Detection</h3><p>Detecting token theft, MFA bypass, and SSO abuse.</p><a class="btn" href="/blog/identity-threat-detection.html">Read article</a></article>
+    <article class="card"><h3>Supply Chain Security</h3><p>SBOMs, signing, provenance, and CI/CD hardening.</p><a class="btn" href="/blog/supply-chain-security.html">Read article</a></article>
+    <article class="card"><h3>Modern Phishing Defense</h3><p>FIDO2, DMARC enforcement, and user training that works.</p><a class="btn" href="/blog/modern-phishing-defense.html">Read article</a></article>
+    <article class="card"><h3>Threat Hunting Playbooks</h3><p>From hypothesis to evidence using EDR, logs, and intel.</p><a class="btn" href="/blog/threat-hunting-playbooks.html">Read article</a></article>
+    <article class="card"><h3>Chaos Engineering for Security</h3><p>Validate controls and response with safe failure injection.</p><a class="btn" href="/blog/chaos-engineering-security.html">Read article</a></article>
+  </main>
+
+  <footer>© 2025 Hifaazati Technologies</footer>
+</body>
+</html>
