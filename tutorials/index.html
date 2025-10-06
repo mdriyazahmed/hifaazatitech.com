@@ -1,323 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Tutorials - HifaazatiTech</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #0a0f1c 0%, #1a1f35 100%);
-            color: #e0e6ed;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-        
-        header {
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid rgba(110, 231, 255, 0.1);
-        }
-        
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #6ee7ff 0%, #7c4dff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-        
-        nav a {
-            color: #e0e6ed;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-weight: 500;
-        }
-        
-        nav a:hover {
-            color: #6ee7ff;
-        }
-        
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #6ee7ff 0%, #7c4dff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            color: #94a3b8;
-            margin-bottom: 3rem;
-        }
-        
-        .level-section {
-            margin-bottom: 3rem;
-        }
-        
-        .level-section h2 {
-            color: #6ee7ff;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-        }
-        
-        .tutorial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .tutorial-card {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(110, 231, 255, 0.2);
-            border-radius: 12px;
-            padding: 1.5rem;
-            transition: all 0.3s;
-            backdrop-filter: blur(10px);
-        }
-        
-        .tutorial-card:hover {
-            transform: translateY(-5px);
-            border-color: #6ee7ff;
-            box-shadow: 0 10px 30px rgba(110, 231, 255, 0.2);
-        }
-        
-        .tutorial-card h3 {
-            color: #7c4dff;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-        
-        .tutorial-card p {
-            color: #cbd5e1;
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-        
-        .coming-soon {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: rgba(124, 77, 255, 0.2);
-            color: #7c4dff;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-        
-        .difficulty-badge {
-            display: inline-block;
-            padding: 0.3rem 0.7rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .beginner {
-            background: rgba(0, 229, 168, 0.2);
-            color: #00e5a8;
-        }
-        
-        .intermediate {
-            background: rgba(255, 176, 32, 0.2);
-            color: #ffb020;
-        }
-        
-        .advanced {
-            background: rgba(239, 68, 68, 0.2);
-            color: #ef4444;
-        }
-        
-        footer {
-            background: rgba(15, 23, 42, 0.8);
-            padding: 2rem 0;
-            text-align: center;
-            margin-top: 4rem;
-            border-top: 1px solid rgba(110, 231, 255, 0.1);
-        }
-        
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .tutorial-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorials - Hifaazati Technologies</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f4f4; color: #333; line-height: 1.6; }
+    header { background: linear-gradient(135deg, #1e3c72, #2a5298); color: #fff; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 5px rgba(0,0,0,.1); }
+    nav { max-width: 1400px; margin: 0 auto; padding: .8rem 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+    .logo { color: #fff; font-weight: 700; text-decoration: none; }
+    nav ul { list-style: none; display: flex; gap: .8rem; flex-wrap: wrap; }
+    nav a { color: #fff; text-decoration: none; padding: .4rem .6rem; border-radius: 4px; }
+    nav a:hover { background: rgba(255,255,255,.2); }
+    .hero { background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; padding: 3rem 2rem; text-align: center; }
+    .hero h1 { font-size: 2.2rem; margin-bottom: .4rem; }
+    .container { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
+    section { background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.08); padding: 1.5rem; }
+    h2 { color: #1e3c72; border-bottom: 3px solid #2a5298; padding-bottom: .4rem; margin-bottom: 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+    .card { background: #f8f9fa; border-left: 4px solid #2a5298; border-radius: 8px; padding: 1rem; display: grid; gap: .5rem; }
+    .card h3 { margin: 0; color: #1e3c72; }
+    .badge { display: inline-block; padding: .2rem .5rem; border-radius: 4px; font-size: .8rem; font-weight: 600; }
+    .beginner { background: #e8fff6; color: #0f7a56; }
+    .intermediate { background: #fff6e5; color: #915a00; }
+    .advanced { background: #ffecec; color: #8f1d1d; }
+    .soon { display: inline-block; background: #eee; color: #555; padding: .25rem .5rem; border-radius: 4px; font-size: .8rem; }
+    footer { background: #1e3c72; color: #fff; text-align: center; padding: 1.2rem; margin-top: 2rem; }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">HifaazatiTech</div>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../services.html">Services</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="../resources.html">Resources</a></li>
-                <li><a href="../tools.html">Tools</a></li>
-                <li><a href="../guides/">Guides</a></li>
-                <li><a href="../news/">News</a></li>
-                <li><a href="index.html">Tutorials</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <h1>🎯 Cybersecurity Tutorials</h1>
-        <p class="subtitle">Hands-on learning resources for security professionals at all levels. From beginner-friendly introductions to advanced techniques.</p>
-        
-        <div class="level-section">
-            <h2>🌱 Beginner Level</h2>
-            <div class="tutorial-grid">
-                <div class="tutorial-card">
-                    <span class="difficulty-badge beginner">Beginner</span>
-                    <h3>Introduction to Log Analysis</h3>
-                    <p>Learn the fundamentals of security log analysis, including common log formats and basic correlation techniques.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-                
-                <div class="tutorial-card">
-                    <span class="difficulty-badge beginner">Beginner</span>
-                    <h3>Setting Up a Home SOC Lab</h3>
-                    <p>Step-by-step guide to building your own Security Operations Center lab for hands-on practice.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-                
-                <div class="tutorial-card">
-                    <span class="difficulty-badge beginner">Beginner</span>
-                    <h3>Understanding MITRE ATT&CK Framework</h3>
-                    <p>Comprehensive introduction to the MITRE ATT&CK framework and how to use it for threat modeling.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-                
-                <div class="tutorial-card">
-                    <span class="difficulty-badge beginner">Beginner</span>
-                    <h3>Basic Wireshark Packet Analysis</h3>
-                    <p>Get started with network traffic analysis using Wireshark. Learn to capture and analyze packets.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-            </div>
+  <header>
+    <nav>
+      <a class="logo" href="../index.html">Hifaazati Technologies</a>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../guides/index.html">Guides</a></li>
+        <li><a href="index.html">Tutorials</a></li>
+        <li><a href="../news/index.html">News</a></li>
+        <li><a href="../tools.html">Tools</a></li>
+        <li><a href="../resources.html">Resources</a></li>
+        <li><a href="../case-studies.html">Case Studies</a></li>
+        <li><a href="../glossary.html">Glossary</a></li>
+        <li><a href="../careers.html">Careers</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Cybersecurity Tutorials</h1>
+    <p>Hands-on learning for every level, from fundamentals to advanced techniques.</p>
+  </div>
+
+  <div class="container">
+    <section>
+      <h2>Beginner</h2>
+      <div class="grid">
+        <div class="card">
+          <span class="badge beginner">Beginner</span>
+          <h3>Introduction to Log Analysis</h3>
+          <p>Common log formats and basic correlation to spot suspicious activity.</p>
+          <span class="soon">Coming soon</span>
         </div>
-        
-        <div class="level-section">
-            <h2>💡 Intermediate Level</h2>
-            <div class="tutorial-grid">
-                <div class="tutorial-card">
-                    <span class="difficulty-badge intermediate">Intermediate</span>
-                    <h3>Building Detection Rules in Splunk</h3>
-                    <p>Master the art of creating effective detection rules and alerts using Splunk's search language.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-                
-                <div class="tutorial-card">
-                    <span class="difficulty-badge intermediate">Intermediate</span>
-                    <h3>Incident Response Workflow</h3>
-                    <p>Complete walkthrough of incident response procedures from detection to remediation.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-                
-                <div class="tutorial-card">
-                    <span class="difficulty-badge intermediate">Intermediate</span>
-                    <h3>Memory Forensics with Volatility</h3>
-                    <p>Learn to analyze memory dumps and uncover malicious activity using Volatility Framework.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-                
-                <div class="tutorial-card">
-                    <span class="difficulty-badge intermediate">Intermediate</span>
-                    <h3>Threat Hunting with Velociraptor</h3>
-                    <p>Advanced threat hunting techniques using Velociraptor for endpoint visibility and response.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-            </div>
+        <div class="card">
+          <span class="badge beginner">Beginner</span>
+          <h3>Setting Up a Home SOC Lab</h3>
+          <p>Build a local lab for SIEM, EDR, and traffic capture experimentation.</p>
+          <span class="soon">Coming soon</span>
         </div>
-        
-        <div class="level-section">
-            <h2>🚀 Advanced Level</h2>
-            <div class="tutorial-grid">
-                <div class="tutorial-card">
-                    <span class="difficulty-badge advanced">Advanced</span>
-                    <h3>Detection Engineering with Sigma</h3>
-                    <p>Write platform-agnostic detection rules using Sigma format for cross-SIEM compatibility.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-                
-                <div class="tutorial-card">
-                    <span class="difficulty-badge advanced">Advanced</span>
-                    <h3>Advanced Malware Analysis</h3>
-                    <p>Deep dive into static and dynamic malware analysis techniques including reverse engineering.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-                
-                <div class="tutorial-card">
-                    <span class="difficulty-badge advanced">Advanced</span>
-                    <h3>Custom YARA Rule Development</h3>
-                    <p>Create sophisticated YARA rules for malware detection and threat hunting.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-                
-                <div class="tutorial-card">
-                    <span class="difficulty-badge advanced">Advanced</span>
-                    <h3>Kubernetes Security Monitoring</h3>
-                    <p>Implement comprehensive security monitoring for containerized environments and K8s clusters.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-                
-                <div class="tutorial-card">
-                    <span class="difficulty-badge advanced">Advanced</span>
-                    <h3>Cloud Detection Engineering</h3>
-                    <p>Build detection and response capabilities for AWS, Azure, and GCP cloud environments.</p>
-                    <span class="coming-soon">Coming Soon</span>
-                </div>
-            </div>
+        <div class="card">
+          <span class="badge beginner">Beginner</span>
+          <h3>MITRE ATT&CK Basics</h3>
+          <p>Map adversary behavior to ATT&CK tactics and techniques.</p>
+          <span class="soon">Coming soon</span>
         </div>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 HifaazatiTech. All rights reserved. | Empowering organizations with cutting-edge cybersecurity solutions.</p>
-    </footer>
+      </div>
+    </section>
+
+    <section style="margin-top:1rem;">
+      <h2>Intermediate</h2>
+      <div class="grid">
+        <div class="card">
+          <span class="badge intermediate">Intermediate</span>
+          <h3>Detection Rules in Splunk</h3>
+          <p>Write robust SPL queries and alerts for high-signal detections.</p>
+          <span class="soon">Coming soon</span>
+        </div>
+        <div class="card">
+          <span class="badge intermediate">Intermediate</span>
+          <h3>Incident Response Workflow</h3>
+          <p>From detection to recovery with playbooks and evidence handling.</p>
+          <span class="soon">Coming soon</span>
+        </div>
+        <div class="card">
+          <span class="badge intermediate">Intermediate</span>
+          <h3>Memory Forensics with Volatility</h3>
+          <p>Analyze memory dumps to discover processes, modules, and artifacts.</p>
+          <span class="soon">Coming soon</span>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:1rem;">
+      <h2>Advanced</h2>
+      <div class="grid">
+        <div class="card">
+          <span class="badge advanced">Advanced</span>
+          <h3>Detection Engineering with Sigma</h3>
+          <p>Create portable rules and validate quality with test data.</p>
+          <span class="soon">Coming soon</span>
+        </div>
+        <div class="card">
+          <span class="badge advanced">Advanced</span>
+          <h3>Kubernetes Security Monitoring</h3>
+          <p>Build observability for clusters, nodes, and workloads.</p>
+          <span class="soon">Coming soon</span>
+        </div>
+        <div class="card">
+          <span class="badge advanced">Advanced</span>
+          <h3>Cloud Detection Engineering</h3>
+          <p>Detections and automation for AWS, Azure, and GCP.</p>
+          <span class="soon">Coming soon</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    © 2025 Hifaazati Technologies. All rights reserved.
+  </footer>
 </body>
 </html>
