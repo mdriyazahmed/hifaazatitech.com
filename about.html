@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Hifaazati Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#0b1220; --card:#0f1629; --brand:#6c9cff; --grad1:#667eea; --grad2:#764ba2; --muted:#9fb0d1; --text:#e9eefc; --accent:#00d4ff }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:radial-gradient(1200px 600px at 20% -10%,rgba(108,156,255,.15),transparent),linear-gradient(180deg,#0b1220 0%,#0b1220 60%,#0a101c 100%);color:var(--text);line-height:1.7}
+    header{position:sticky;top:0;z-index:20;background:rgba(11,18,32,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem}
+    .logo{display:flex;gap:.6rem;align-items:center;font-weight:800;letter-spacing:.4px}
+    .logo-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--grad1),var(--grad2));display:grid;place-items:center;box-shadow:0 8px 24px rgba(102,126,234,.35)}
+    .logo-badge span{font-weight:900}
+    .nav-links{display:flex;gap:1.25rem}
+    .nav-links a{color:var(--text);text-decoration:none;font-weight:500;opacity:.9}
+    .nav-links a:hover{opacity:1}
+    .btn{background:linear-gradient(135deg,var(--grad1),var(--grad2));color:white;border:none;border-radius:10px;padding:.45rem .8rem;font-weight:600;cursor:pointer;box-shadow:0 10px 24px rgba(118,75,162,.25)}
+    .hero-inner{max-width:1200px;margin:0 auto;padding:4rem 2rem 2rem;display:grid;grid-template-columns:1.2fr .8fr;gap:2rem}
+    .pill{display:inline-flex;gap:.5rem;align-items:center;border:1px solid rgba(255,255,255,.1);padding:.35rem .6rem;border-radius:999px;color:#cfe0ff;font-size:.9rem}
+    h1{font-size:2.2rem;margin:.75rem 0 1rem;line-height:1.2}
+    p.lead{color:#cfe0ff;max-width:60ch}
+    .stats{display:flex;gap:1.25rem;margin-top:1.25rem}
+    .stat{background:rgba(255,255,255,.04);padding:.9rem 1.1rem;border-radius:12px;border:1px solid rgba(255,255,255,.06)}
+    .grid{max-width:1200px;margin:0 auto;padding:2rem}
+    .section{padding:2rem 0;border-top:1px solid rgba(255,255,255,.06)}
+    h2{font-size:1.7rem;margin:0 0 1rem;color:#d9e6ff}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:1.25rem}
+    .timeline{position:relative;margin-left:1rem}
+    .timeline::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(var(--grad1),transparent)}
+    .tl-item{position:relative;margin:1.25rem 0 1.25rem 1.5rem}
+    .tl-item::before{content:"";position:absolute;left:-1.5rem;top:.35rem;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px rgba(0,212,255,.15)}
+    .team{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+    .member{background:var(--card);border:1px solid rgba(255,255,255,.06);padding:1rem;border-radius:14px;display:grid;grid-template-columns:64px 1fr;gap:1rem}
+    .avatar{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,#1e3c72,#2a5298);display:grid;place-items:center;font-weight:800}
+    .badges{display:flex;gap:.4rem;margin-top:.25rem}
+    .badge{font-size:.75rem;padding:.2rem .5rem;border-radius:999px;border:1px solid rgba(255,255,255,.12);color:#cfe0ff}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:2rem;color:#9fb0d1;text-align:center}
+    @media (max-width: 900px){.hero-inner{grid-template-columns:1fr}.two-col{grid-template-columns:1fr}.team{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <div class="logo-badge"><span>H</span></div>
+        <span>Hifaazati Technologies</span>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Home</a>
+        <a aria-current="page" href="/about.html">About</a>
+        <a href="/services.html">Services</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/careers.html"><button class="btn">Careers</button></a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="pill">About Hifaazati • Cybersecurity excellence</span>
+        <h1>We secure what matters—your data, your brand, and your future.</h1>
+        <p class="lead">Founded by security architects and incident responders, Hifaazati Technologies blends offensive expertise with defensive rigor to deliver measurable cyber resilience for modern enterprises.</p>
+        <div class="stats">
+          <div class="stat">10+ years in cyber</div>
+          <div class="stat">150+ clients</div>
+          <div class="stat">24/7 SOC coverage</div>
+          <div class="stat">Global delivery</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Fast facts</h3>
+        <ul>
+          <li>Headquarters: Remote-first with hubs in Bengaluru and Dubai</li>
+          <li>Certifications: ISO 27001, SOC 2 Type II, CREST partners</li>
+          <li>Compliance expertise: PCI DSS, HIPAA, GDPR, RBI, ISO 27017/18</li>
+          <li>Cloud partners: AWS, Azure, Google Cloud</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <main class="grid">
+    <section class="section two-col">
+      <div class="card">
+        <h2>Our Story</h2>
+        <p>Hifaazati Technologies was founded to solve a persistent problem: organizations were buying tools faster than they were improving outcomes. We built a company that aligns strategy, architecture, and operations so that every control has purpose and every alert has context.</p>
+        <p>From our first incident response engagement to our managed detection and response (MDR) platform, we have stayed obsessed with customer outcomes—reducing dwell time, accelerating mean-time-to-detect, and eradicating business-impacting threats.</p>
+      </div>
+      <div class="card timeline">
+        <h2>Milestones</h2>
+        <div class="tl-item"><strong>2016</strong> • Team formed by ex-CSIRT leaders and red teamers</div>
+        <div class="tl-item"><strong>2018</strong> • Launched first 24/7 SOC with cloud-native telemetry</div>
+        <div class="tl-item"><strong>2020</strong> • Cross-industry IR playbooks and threat intel program</div>
+        <div class="tl-item"><strong>2022</strong> • Achieved ISO 27001; expanded to MEA and EU</div>
+        <div class="tl-item"><strong>2024</strong> • Introduced AI-assisted detection engineering and purple teaming</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Leadership</h2>
+      <div class="team">
+        <div class="member">
+          <div class="avatar">RA</div>
+          <div>
+            <h3>Riyaan Ahmed • Chief Executive Officer</h3>
+            <p>Builder of high-trust security programs; previously led enterprise risk at a global fintech. Focus: strategy, governance, and customer value.</p>
+            <div class="badges"><span class="badge">CISM</span><span class="badge">CISSP</span><span class="badge">MBA</span></div>
+          </div>
+        </div>
+        <div class="member">
+          <div class="avatar">SK</div>
+          <div>
+            <h3>Sana Khan • Chief Technology Officer</h3>
+            <p>Hands-on security architect with 12+ years across cloud, identity, and detection engineering. Leads our platform and MDR roadmap.</p>
+            <div class="badges"><span class="badge">AWS Security</span><span class="badge">Azure</span><span class="badge">GCP</span></div>
+          </div>
+        </div>
+        <div class="member">
+          <div class="avatar">VM</div>
+          <div>
+            <h3>Varun Mehta • Head of Offensive Security</h3>
+            <p>Red team leader specializing in adversary emulation and breach simulation. Designs purple-team programs that drive measurable uplift.</p>
+            <div class="badges"><span class="badge">OSCP</span><span class="badge">OSCE</span><span class="badge">CRTO</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section two-col">
+      <div class="card">
+        <h2>Values</h2>
+        <ul>
+          <li>Customer-first: outcomes over outputs</li>
+          <li>Evidence-driven: metrics, measurements, and transparency</li>
+          <li>Secure-by-design: least privilege, zero trust, resilience</li>
+          <li>Human-centered: empower defenders and educate users</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Global Presence</h2>
+        <p>We operate remotely with on-site capabilities in India, Middle East, North America, and the EU. Our 24/7 follow-the-sun model ensures continuous monitoring and rapid response.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Certifications and Partnerships</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>Team Certifications</h3>
+          <ul>
+            <li>CISSP, CISM, CCSP</li>
+            <li>OSCP, OSWE, OSEP</li>
+            <li>GIAC: GCIH, GCIA, GCFA</li>
+            <li>Azure, AWS, GCP Professional Security</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Technology Partnerships</h3>
+          <ul>
+            <li>AWS, Microsoft, Google Cloud</li>
+            <li>Okta, CrowdStrike, SentinelOne</li>
+            <li>Elastic, Splunk, Sumo Logic</li>
+            <li>HashiCorp, GitHub, Atlassian</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Hifaazati Technologies • Secure by design
+  </footer>
+</body>
+</html>
