@@ -8,9 +8,14 @@
 </head>
 <body>
   <header>
-    <nav>
+    <button id="menuToggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-bar">
       <a class="logo" href="index.html">Hifaazati Technologies</a>
-      <ul>
+      <ul class="top-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
@@ -27,151 +32,74 @@
       </ul>
     </nav>
   </header>
-
   <div class="hero">
     <h1>Cybersecurity Glossary</h1>
     <p>Essential cybersecurity terminology, definitions, and concepts</p>
   </div>
-
   <div class="container">
     <section>
-      <h2>Common Cybersecurity Terms</h2>
+      <h2>Common Threats</h2>
       <div class="grid">
         <div class="card">
-          <h3>Advanced Persistent Threat (APT)</h3>
-          <p>A prolonged and targeted cyberattack in which an intruder gains access to a network and remains undetected for an extended period.</p>
-        </div>
-        <div class="card">
-          <h3>Antivirus</h3>
-          <p>Software designed to detect, prevent, and remove malicious software from computer systems.</p>
-        </div>
-        <div class="card">
-          <h3>Authentication</h3>
-          <p>The process of verifying the identity of a user, device, or system before granting access to resources.</p>
-        </div>
-        <div class="card">
-          <h3>Backdoor</h3>
-          <p>A method of bypassing normal authentication to secure unauthorized remote access to a computer.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Attack Types</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Brute Force Attack</h3>
-          <p>A trial-and-error method used to obtain information such as passwords by systematically trying all possible combinations.</p>
-        </div>
-        <div class="card">
-          <h3>DDoS (Distributed Denial of Service)</h3>
-          <p>An attack that aims to make a service unavailable by overwhelming it with traffic from multiple sources.</p>
-        </div>
-        <div class="card">
-          <h3>Man-in-the-Middle (MitM)</h3>
-          <p>An attack where the attacker secretly intercepts and relays messages between two parties who believe they are communicating directly.</p>
+          <h3>Malware</h3>
+          <p>Malicious software designed to harm, exploit, or otherwise compromise a computer system or network.</p>
         </div>
         <div class="card">
           <h3>Phishing</h3>
-          <p>A social engineering attack that attempts to steal user data through deceptive emails or websites.</p>
+          <p>Fraudulent attempt to obtain sensitive information by disguising as a trustworthy entity in electronic communication.</p>
         </div>
         <div class="card">
           <h3>Ransomware</h3>
-          <p>Malicious software that encrypts files and demands payment for their decryption.</p>
+          <p>Type of malware that encrypts files and demands payment for decryption key.</p>
         </div>
         <div class="card">
-          <h3>SQL Injection</h3>
-          <p>A code injection technique that exploits vulnerabilities in database queries to manipulate or steal data.</p>
+          <h3>Zero-Day Exploit</h3>
+          <p>Attack that targets a previously unknown vulnerability in software before a patch is available.</p>
         </div>
       </div>
     </section>
-
     <section>
-      <h2>Security Concepts</h2>
+      <h2>Network Security</h2>
       <div class="grid">
         <div class="card">
-          <h3>Encryption</h3>
-          <p>The process of encoding information so that only authorized parties can access it.</p>
-        </div>
-        <div class="card">
           <h3>Firewall</h3>
-          <p>A network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.</p>
+          <p>Network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.</p>
         </div>
         <div class="card">
           <h3>Intrusion Detection System (IDS)</h3>
-          <p>A device or software application that monitors network traffic for suspicious activity and policy violations.</p>
+          <p>Device or software that monitors network traffic for suspicious activity and sends alerts when detected.</p>
         </div>
+        <div class="card">
+          <h3>VPN (Virtual Private Network)</h3>
+          <p>Encrypted connection over a less secure network, typically the internet, providing privacy and anonymity.</p>
+        </div>
+        <div class="card">
+          <h3>DDoS (Distributed Denial of Service)</h3>
+          <p>Attack where multiple compromised systems target a single system causing denial of service for users.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Authentication & Access Control</h2>
+      <div class="grid">
         <div class="card">
           <h3>Multi-Factor Authentication (MFA)</h3>
-          <p>A security system requiring multiple methods of authentication from independent categories of credentials.</p>
+          <p>Security system requiring multiple methods of authentication from independent categories of credentials.</p>
         </div>
         <div class="card">
-          <h3>Penetration Testing</h3>
-          <p>Authorized simulated cyberattack on a computer system to evaluate its security.</p>
+          <h3>Single Sign-On (SSO)</h3>
+          <p>Authentication scheme allowing users to log in with a single ID to any of several related software systems.</p>
         </div>
         <div class="card">
-          <h3>Virtual Private Network (VPN)</h3>
-          <p>Technology that creates a secure, encrypted connection over a less secure network, such as the internet.</p>
+          <h3>Access Control List (ACL)</h3>
+          <p>List of permissions attached to an object specifying which users or system processes can access objects.</p>
+        </div>
+        <div class="card">
+          <h3>Least Privilege</h3>
+          <p>Security principle in which users are given minimum levels of access necessary to complete job functions.</p>
         </div>
       </div>
     </section>
-
-    <section>
-      <h2>Malware Types</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Adware</h3>
-          <p>Software that automatically displays or downloads advertising material when a user is online.</p>
-        </div>
-        <div class="card">
-          <h3>Keylogger</h3>
-          <p>Software that records every keystroke made by a user, often used to steal passwords and sensitive information.</p>
-        </div>
-        <div class="card">
-          <h3>Rootkit</h3>
-          <p>Malicious software designed to provide continued privileged access to a computer while hiding its presence.</p>
-        </div>
-        <div class="card">
-          <h3>Spyware</h3>
-          <p>Software that secretly monitors and collects user information without their knowledge.</p>
-        </div>
-        <div class="card">
-          <h3>Trojan Horse</h3>
-          <p>Malicious software disguised as legitimate software to trick users into installing it.</p>
-        </div>
-        <div class="card">
-          <h3>Virus</h3>
-          <p>Malicious code that replicates by copying itself to another program, computer boot sector, or document.</p>
-        </div>
-        <div class="card">
-          <h3>Worm</h3>
-          <p>Self-replicating malware that spreads to other computers without human intervention.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Security Protocols & Standards</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>HTTPS</h3>
-          <p>Hypertext Transfer Protocol Secure - an encrypted version of HTTP for secure communication over networks.</p>
-        </div>
-        <div class="card">
-          <h3>SSL/TLS</h3>
-          <p>Secure Sockets Layer/Transport Layer Security - cryptographic protocols designed to provide secure communications.</p>
-        </div>
-        <div class="card">
-          <h3>Zero Trust</h3>
-          <p>Security concept based on the belief that organizations should not automatically trust anything inside or outside its perimeters.</p>
-        </div>
-        <div class="card">
-          <h3>SIEM</h3>
-          <p>Security Information and Event Management - provides real-time analysis of security alerts generated by network hardware and applications.</p>
-        </div>
-      </div>
-    </section>
-
     <section>
       <h2>Data Protection</h2>
       <div class="grid">
@@ -193,7 +121,6 @@
         </div>
       </div>
     </section>
-
     <section>
       <h2>Compliance & Governance</h2>
       <div class="grid">
@@ -216,10 +143,50 @@
       </div>
     </section>
   </div>
-
   <footer>
-    <p>&copy; 2025 Hifaazati Technologies. All rights reserved.</p>
-    <p>Securing your digital world, one solution at a time.</p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Hifaazati Technologies</h3>
+        <p>Advanced cybersecurity solutions and consulting services</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="guides/index.html">Guides</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Hifaazati Technologies. All rights reserved.</p>
+    </div>
   </footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const topMenu = document.querySelector('.top-menu');
+
+    menuToggle.addEventListener('click', () => {
+      topMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
