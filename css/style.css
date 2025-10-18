@@ -189,14 +189,20 @@ footer p { margin: 0; }
 }
 
 /* ===== MOBILE MENU ===== */
+/* Hide mobile menu by default on desktop */
+#mobileMenu {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .menu-btn { display: block; }
 
   /* Hide desktop menu */
   .main-nav { display: none; }
 
-  /* Mobile menu slide-in */
+  /* Show mobile menu */
   #mobileMenu {
+    display: block;
     position: fixed;
     top: 0;
     right: -280px; /* hidden initially */
