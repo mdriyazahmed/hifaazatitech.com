@@ -160,7 +160,7 @@ footer p { margin: 0; }
 
 /* ===== MOBILE ===== */
 .menu-btn {
-  display: none;
+  display: block;
   background: none;
   border: none;
   font-size: 1.8rem;
