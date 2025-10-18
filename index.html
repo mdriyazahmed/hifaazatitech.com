@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Hifaazati Technologies - Cybersecurity Solutions</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link href="css/style.css" rel="stylesheet" />
 </head>
-
 <body>
   <!-- ===== HEADER (Loaded Dynamically) ===== -->
   <div id="header"></div>
@@ -27,7 +26,7 @@
         Hifaazati Technologies is a leading cybersecurity company dedicated to protecting businesses and organizations from evolving digital threats.
         With our team of expert security professionals, we deliver comprehensive security solutions tailored to your unique needs.
       </p>
-      <p><strong>Our Mission:</strong> To provide world-class cybersecurity services that empower organizations to operate securely in the digital age.</p>
+      <h3>Our Mission: To provide world-class cybersecurity services that empower organizations to operate securely in the digital age.</h3>
     </section>
 
     <section id="services">
@@ -42,7 +41,7 @@
           <p>24/7 security monitoring, incident response, and threat management to keep your systems protected around the clock.</p>
         </div>
         <div class="card">
-          <h3>🔐 Compliance & Risk Management</h3>
+          <h3>🔐 Compliance &amp; Risk Management</h3>
           <p>Expert guidance to ensure your organization meets industry standards and regulatory requirements for data protection.</p>
         </div>
         <div class="card">
@@ -80,11 +79,15 @@
     // Load HTML
     const headerHTML = await fetch('header.html').then(res => res.text());
     document.getElementById('header').innerHTML = headerHTML;
-
     const footerHTML = await fetch('footer.html').then(res => res.text());
     document.getElementById('footer').innerHTML = footerHTML;
 
     // ===== MOBILE MENU JS =====
+    // FIX: Event listeners MUST be attached AFTER header.html is dynamically loaded
+    // Reason: The hamburger menu elements (menuToggle, mobileMenu, menuBackdrop) 
+    // don't exist in the DOM until header.html is loaded and inserted via innerHTML.
+    // Attempting to attach listeners before the header loads will result in null references.
+    
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     const menuBackdrop = document.getElementById('menuBackdrop');
@@ -119,6 +122,6 @@
   }
 
   loadHeaderFooter();
-</script>
+  </script>
 </body>
 </html>
