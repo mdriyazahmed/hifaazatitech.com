@@ -4,33 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resources - Hifaazati Technologies</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="../../css/style.css" rel="stylesheet"/>
 </head>
 <body>
-  <!-- ===== HEADER ===== -->
-  <header>
-    <div class="nav-bar">
-      <a class="logo" href="index.html">Hifaazati Technologies</a>
-      <button class="menu-btn" id="menuToggle">☰</button>
-      <nav class="top-menu" id="topMenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="guides/index.html">Guides</a></li>
-          <li><a href="tutorials/index.html">Tutorials</a></li>
-          <li><a href="news/index.html">News</a></li>
-          <li><a href="tools.html">Tools</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="case-studies.html">Case Studies</a></li>
-          <li><a href="glossary.html">Glossary</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <!-- ===== HEADER (Loaded Dynamically) ===== -->
+  <div id="header"></div>
 
   <!-- ===== HERO ===== -->
   <div class="hero">
@@ -146,30 +124,45 @@
     </section>
   </div>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <p>© 2025 Hifaazati Technologies. All rights reserved.</p>
-  </footer>
-
-  <!-- ===== SCRIPTS ===== -->
+  <!-- ===== FOOTER (Loaded Dynamically) ===== -->
+  <div id="footer"></div>
+  <!-- ===== LOAD HEADER & FOOTER ===== -->
   <script>
+  async function loadHeaderFooter() {
+    // Load HTML
+    const headerHTML = await fetch('../../header.html').then(res => res.text());
+    document.getElementById('header').innerHTML = headerHTML;
+    const footerHTML = await fetch('../../footer.html').then(res => res.text());
+    document.getElementById('footer').innerHTML = footerHTML;
+    
+    // ===== MOBILE MENU JS =====
+    // Get elements
     const menuToggle = document.getElementById('menuToggle');
-    const topMenu = document.querySelector('.top-menu ul');
-    const header = document.querySelector('header');
-
-    // Toggle mobile menu
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    // Toggle menu open/close - only hamburger controls menu
     menuToggle.addEventListener('click', () => {
-      topMenu.classList.toggle('show');
+      mobileMenu.classList.toggle('open');
     });
-
-    // Frosted glass scroll effect
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 20) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+    
+    // Dropdowns for mobile
+    document.querySelectorAll('#mobileMenu .dropdown > a').forEach(drop => {
+      drop.addEventListener('click', function(e) {
+        e.preventDefault();
+        drop.nextElementSibling.classList.toggle('show');
+      });
     });
+    
+    // Nested submenu for mobile
+    document.querySelectorAll('#mobileMenu .dropdown-submenu > a').forEach(sub => {
+      sub.addEventListener('click', function(e) {
+        e.preventDefault();
+        sub.nextElementSibling.classList.toggle('show');
+        sub.classList.toggle('active');
+      });
+    });
+  }
+  loadHeaderFooter();
   </script>
 </body>
 </html>
