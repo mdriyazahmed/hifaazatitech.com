@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Careers - Hifaazati Technologies</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- ===== HEADER ===== -->
   <header>
-    <button id="menuToggle" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <nav class="nav-bar">
+    <div class="nav-bar">
       <a class="logo" href="index.html">Hifaazati Technologies</a>
-      <ul class="top-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="guides/index.html">Guides</a></li>
-        <li><a href="tutorials/index.html">Tutorials</a></li>
-        <li><a href="news/index.html">News</a></li>
-        <li><a href="tools.html">Tools</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="case-studies.html">Case Studies</a></li>
-        <li><a href="glossary.html">Glossary</a></li>
-        <li><a href="careers.html">Careers</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+      <button class="menu-btn" id="menuToggle">☰</button>
+      <nav class="top-menu" id="topMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="guides/index.html">Guides</a></li>
+          <li><a href="tutorials/index.html">Tutorials</a></li>
+          <li><a href="news/index.html">News</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
+
+  <!-- ===== HERO ===== -->
   <div class="hero">
     <h1>Join Our Team</h1>
     <p>Build a rewarding career protecting organizations from cyber threats</p>
   </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
   <div class="container">
     <section>
       <h2>Why Work With Us?</h2>
@@ -59,6 +62,7 @@
         </div>
       </div>
     </section>
+
     <section>
       <h2>Current Openings</h2>
       <div class="grid">
@@ -112,6 +116,7 @@
         </div>
       </div>
     </section>
+
     <section>
       <h2>Benefits & Perks</h2>
       <ul>
@@ -124,6 +129,7 @@
         <li><strong>Team Building:</strong> Regular team events, hackathons, and social activities</li>
       </ul>
     </section>
+
     <section>
       <h2>Our Hiring Process</h2>
       <div class="grid">
@@ -145,51 +151,33 @@
         </div>
       </div>
     </section>
+
     <section class="cta">
       <h2>Ready to Join Our Team?</h2>
       <p>Don't see a position that matches your skills? Send us your resume and we'll keep you in mind for future opportunities.</p>
       <a href="contact.html" class="btn">Get in Touch</a>
     </section>
   </div>
+
+  <!-- ===== FOOTER ===== -->
   <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Hifaazati Technologies</h3>
-        <p>Advanced cybersecurity solutions and consulting services</p>
-      </div>
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Resources</h3>
-        <ul>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="guides/index.html">Guides</a></li>
-          <li><a href="case-studies.html">Case Studies</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Hifaazati Technologies. All rights reserved.</p>
-    </div>
+    <p>© 2025 Hifaazati Technologies. All rights reserved.</p>
   </footer>
+
+  <!-- ===== SCRIPTS ===== -->
   <script>
     const menuToggle = document.getElementById('menuToggle');
-    const topMenu = document.querySelector('.top-menu');
+    const topMenu = document.querySelector('.top-menu ul');
+    const header = document.querySelector('header');
 
+    // Toggle mobile menu
     menuToggle.addEventListener('click', () => {
-      topMenu.classList.toggle('active');
-      menuToggle.classList.toggle('active');
+      topMenu.classList.toggle('show');
     });
 
+    // Frosted glass scroll effect
     window.addEventListener('scroll', () => {
-      const header = document.querySelector('header');
-      if (window.scrollY > 50) {
+      if (window.scrollY > 20) {
         header.classList.add('scrolled');
       } else {
         header.classList.remove('scrolled');
