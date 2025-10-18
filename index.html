@@ -88,36 +88,39 @@
     // don't exist in the DOM until header.html is loaded and inserted via innerHTML.
     // Attempting to attach listeners before the header loads will result in null references.
     
+    // Get elements
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     const menuBackdrop = document.getElementById('menuBackdrop');
-
-    // Toggle mobile menu
+    
+    // Toggle menu open/close
     menuToggle.addEventListener('click', () => {
       mobileMenu.classList.toggle('open');
       menuBackdrop.classList.toggle('show');
     });
-
-    menuBackdrop.addEventListener('click', function(e) {
-      // Only close if you click directly ON the backdrop, NOT inside the menu
-      if (e.target === menuBackdrop) {
-        mobileMenu.classList.remove('open');
-        menuBackdrop.classList.remove('show');
-      }
+    
+    // Prevent backdrop click from closing the menu when clicking inside the menu
+    mobileMenu.addEventListener('click', function(e) {
+      e.stopPropagation();
     });
-
-
-    // Dropdown toggle for mobile
+    
+    // Only close menu when clicking on backdrop (outside menu)
+    menuBackdrop.addEventListener('click', function() {
+      mobileMenu.classList.remove('open');
+      menuBackdrop.classList.remove('show');
+    });
+    
+    // Dropdowns for mobile
     document.querySelectorAll('#mobileMenu .dropdown > a').forEach(drop => {
-      drop.addEventListener('click', e => {
+      drop.addEventListener('click', function(e) {
         e.preventDefault();
         drop.nextElementSibling.classList.toggle('show');
       });
     });
-
-    // Nested submenu toggle for mobile
+    
+    // Nested submenu for mobile
     document.querySelectorAll('#mobileMenu .dropdown-submenu > a').forEach(sub => {
-      sub.addEventListener('click', e => {
+      sub.addEventListener('click', function(e) {
         e.preventDefault();
         sub.nextElementSibling.classList.toggle('show');
         sub.classList.toggle('active');
