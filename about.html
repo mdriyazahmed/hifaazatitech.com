@@ -1,267 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Hifaazati Technologies</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        
-        /* Unified Navigation Bar */
-        header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-        }
-        
-        nav a:hover {
-            background-color: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-        
-        section {
-            background: white;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        h2 {
-            color: #1e3c72;
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 3px solid #2a5298;
-            padding-bottom: 0.5rem;
-        }
-        
-        h3 {
-            color: #2a5298;
-            font-size: 1.8rem;
-            margin: 2rem 0 1rem 0;
-        }
-        
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .stat-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 4px solid #2a5298;
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #1e3c72;
-        }
-        
-        .stat-label {
-            color: #666;
-            font-size: 1.1rem;
-        }
-        
-        /* Footer */
-        footer {
-            background: #1e3c72;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-        
-        footer p {
-            margin: 0.5rem 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Hifaazati Technologies</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">Hifaazati Technologies</a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="guides/index.html">Guides</a></li>
-                <li><a href="tutorials/index.html">Tutorials</a></li>
-                <li><a href="news/index.html">News</a></li>
-                <li><a href="tools.html">Tools</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="case-studies.html">Case Studies</a></li>
-                <li><a href="glossary.html">Glossary</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="hero">
-        <h1>About Hifaazati Technologies</h1>
-        <p>Leading the way in cybersecurity excellence since inception</p>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="nav-bar">
+      <a class="logo" href="index.html">Hifaazati Technologies</a>
+      <button class="menu-btn" id="menuToggle">☰</button>
+      <nav class="top-menu" id="topMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="guides/index.html">Guides</a></li>
+          <li><a href="tutorials/index.html">Tutorials</a></li>
+          <li><a href="news/index.html">News</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="container">
-        <section>
-            <h2>Who We Are</h2>
-            <p>Hifaazati Technologies is a leading cybersecurity company dedicated to protecting businesses and organizations from evolving digital threats. With our team of expert security professionals, we deliver comprehensive security solutions tailored to your unique needs.</p>
-            <br>
-            <p>Founded on the principles of innovation, integrity, and excellence, we've built a reputation for delivering world-class cybersecurity services to organizations of all sizes across various industries.</p>
-        </section>
+  <!-- ===== HERO ===== -->
+  <div class="hero">
+    <h1>About Hifaazati Technologies</h1>
+    <p>Leading the way in cybersecurity excellence and innovation</p>
+  </div>
 
-        <section>
-            <h2>Our Mission & Vision</h2>
-            <h3>Mission</h3>
-            <p>To provide world-class cybersecurity services that empower organizations to operate securely in the digital age. We strive to be the trusted partner that businesses rely on to protect their most valuable digital assets.</p>
-            
-            <h3>Vision</h3>
-            <p>To be the global leader in cybersecurity innovation, setting industry standards and pioneering new approaches to digital security that make the internet a safer place for everyone.</p>
-        </section>
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="container">
+    <section>
+      <h2>Who We Are</h2>
+      <p>Hifaazati Technologies is a premier cybersecurity firm dedicated to safeguarding organizations against the ever-evolving landscape of digital threats. Founded on principles of excellence, innovation, and unwavering commitment to security, we have established ourselves as trusted partners for businesses seeking comprehensive protection of their digital assets.</p>
+      <p>Our team comprises industry-leading security professionals, certified ethical hackers, and compliance experts who bring decades of combined experience to every engagement. We understand that in today's interconnected world, security is not just a technical requirement—it's a business imperative.</p>
+    </section>
 
-        <section>
-            <h2>By the Numbers</h2>
-            <div class="stats">
-                <div class="stat-card">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Clients Protected</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Security Monitoring</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">10,000+</div>
-                    <div class="stat-label">Threats Neutralized</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">99.9%</div>
-                    <div class="stat-label">Uptime Guarantee</div>
-                </div>
-            </div>
-        </section>
+    <section>
+      <h2>Our Mission</h2>
+      <p>To empower organizations to operate securely and confidently in the digital age by providing world-class cybersecurity services, cutting-edge solutions, and strategic guidance that protect what matters most.</p>
+    </section>
 
-        <section>
-            <h2>Our Values</h2>
-            <ul style="font-size: 1.1rem; line-height: 2;">
-                <li><strong>Customer-First:</strong> We prioritize outcomes over outputs, ensuring our solutions deliver real value</li>
-                <li><strong>Evidence-Driven:</strong> We rely on metrics, measurements, and transparency in everything we do</li>
-                <li><strong>Secure-by-Design:</strong> We implement least privilege, zero trust, and build resilience into every solution</li>
-                <li><strong>Human-Centered:</strong> We empower defenders and educate users to create a security-conscious culture</li>
-                <li><strong>Innovation:</strong> We continuously evolve our techniques to stay ahead of emerging threats</li>
-                <li><strong>Integrity:</strong> We maintain the highest ethical standards in all our operations</li>
-            </ul>
-        </section>
+    <section>
+      <h2>Our Values</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>🎯 Excellence</h3>
+          <p>We strive for excellence in every aspect of our work, delivering solutions that exceed expectations and industry standards.</p>
+        </div>
+        <div class="card">
+          <h3>🔒 Integrity</h3>
+          <p>We operate with the highest levels of integrity, maintaining confidentiality and trust in all client relationships.</p>
+        </div>
+        <div class="card">
+          <h3>💡 Innovation</h3>
+          <p>We embrace innovation, continuously evolving our approaches to stay ahead of emerging threats and technologies.</p>
+        </div>
+        <div class="card">
+          <h3>🤝 Collaboration</h3>
+          <p>We believe in collaborative partnerships, working closely with clients to understand and address their unique security challenges.</p>
+        </div>
+      </div>
+    </section>
 
-        <section>
-            <h2>Global Presence</h2>
-            <p>We operate globally with capabilities spanning multiple regions including India, Middle East, North America, and the European Union. Our follow-the-sun operational model ensures 24/7 monitoring and rapid response capabilities, providing continuous protection for our clients worldwide.</p>
-            <br>
-            <p>With team members strategically located across time zones, we can respond to security incidents at any time, ensuring your organization is always protected.</p>
-        </section>
+    <section>
+      <h2>Why Choose Us</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Expert Team</h3>
+          <p>Industry-certified professionals with extensive real-world experience in cybersecurity.</p>
+        </div>
+        <div class="card">
+          <h3>Proven Track Record</h3>
+          <p>Years of successful engagements protecting organizations across various industries.</p>
+        </div>
+        <div class="card">
+          <h3>24/7 Support</h3>
+          <p>Round-the-clock monitoring and incident response capabilities to keep you protected.</p>
+        </div>
+        <div class="card">
+          <h3>Cutting-Edge Solutions</h3>
+          <p>Latest technologies and methodologies to address modern security challenges.</p>
+        </div>
+      </div>
+    </section>
+  </div>
 
-        <section>
-            <h2>Certifications & Partnerships</h2>
-            <h3>Team Certifications</h3>
-            <ul style="font-size: 1.1rem; line-height: 2;">
-                <li>CISSP, CISM, CCSP - Leadership & Management</li>
-                <li>OSCP, OSWE, OSEP - Offensive Security</li>
-                <li>GIAC: GCIH, GCIA, GCFA - Security Analysis</li>
-                <li>Azure, AWS, GCP Professional Security - Cloud Security</li>
-            </ul>
-            
-            <h3>Technology Partnerships</h3>
-            <ul style="font-size: 1.1rem; line-height: 2;">
-                <li>Cloud Providers: AWS, Microsoft Azure, Google Cloud</li>
-                <li>Security Platforms: Okta, CrowdStrike, SentinelOne</li>
-                <li>Analytics: Elastic, Splunk, Sumo Logic</li>
-                <li>DevSecOps: HashiCorp, GitHub, Atlassian</li>
-            </ul>
-        </section>
-    </div>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Hifaazati Technologies. All rights reserved.</p>
+  </footer>
 
-    <footer>
-        <p>© 2025 Hifaazati Technologies. All rights reserved.</p>
-        <p>Securing your digital world, one solution at a time.</p>
-    </footer>
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const topMenu = document.querySelector('.top-menu ul');
+    const header = document.querySelector('header');
+
+    // Toggle mobile menu
+    menuToggle.addEventListener('click', () => {
+      topMenu.classList.toggle('show');
+    });
+
+    // Frosted glass scroll effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
