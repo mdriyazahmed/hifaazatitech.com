@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f4f4f4;
@@ -12,7 +11,6 @@ body {
   line-height: 1.6;
   padding-top: 70px; /* space for fixed header */
 }
-
 /* ===== HEADER ===== */
 .site-header {
   background-color: #0d253f;
@@ -25,7 +23,6 @@ body {
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
-
 .nav-container {
   display: flex;
   align-items: center;
@@ -33,14 +30,12 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .logo {
   color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
 }
-
 /* ===== MENU ===== */
 .menu {
   list-style: none;
@@ -48,9 +43,7 @@ body {
   align-items: center;
   gap: 20px;
 }
-
 .menu li { position: relative; }
-
 .menu a {
   text-decoration: none;
   color: #fff;
@@ -59,12 +52,10 @@ body {
   display: block;
   transition: background 0.3s;
 }
-
 .menu a:hover {
   background-color: #1e3a5f;
   border-radius: 4px;
 }
-
 /* ===== DROPDOWN ===== */
 .dropdown > .dropdown-menu,
 .dropdown-submenu > .dropdown-menu {
@@ -79,27 +70,22 @@ body {
   z-index: 999;
   min-width: 180px;
 }
-
 .dropdown:hover > .dropdown-menu {
   display: block; /* desktop hover */
 }
-
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
   top: 0;
   left: 100%;
 }
-
 .dropdown-submenu > a::after {
   content: "▸";
   float: right;
   transition: transform 0.3s ease;
 }
-
 .dropdown-submenu > a.active::after {
   transform: rotate(90deg);
 }
-
 /* ===== HERO ===== */
 .hero {
   background: linear-gradient(135deg, #667eea, #764ba2);
@@ -107,17 +93,14 @@ body {
   padding: 2.3rem 2rem 2rem 2rem;
   text-align: center;
 }
-
 .hero h1 { font-size: 2.1rem; }
 .hero p { margin-top: 0.5rem; }
-
 /* ===== MAIN CONTENT ===== */
 .container {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 2rem;
 }
-
 section {
   background: #fff;
   border-radius: 8px;
@@ -125,20 +108,17 @@ section {
   padding: 1.5rem;
   margin-bottom: 1rem;
 }
-
 h2 {
   color: #1e3c72;
   border-bottom: 3px solid #2a5298;
   padding-bottom: .4rem;
   margin-bottom: 1rem;
 }
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
 }
-
 .card {
   background: #f8f9fa;
   border-left: 4px solid #2a5298;
@@ -147,9 +127,7 @@ h2 {
   display: grid;
   gap: .5rem;
 }
-
 .card h3 { margin: 0; color: #1e3c72; }
-
 /* ===== BUTTON ===== */
 .btn {
   display: inline-block;
@@ -159,11 +137,9 @@ h2 {
   border-radius: 6px;
   text-decoration: none;
 }
-
 .btn:hover {
   opacity: 0.9;
 }
-
 /* ===== FOOTER ===== */
 footer {
   background-color: #0d1117;
@@ -173,9 +149,7 @@ footer {
   font-size: 0.9rem;
   border-top: 1px solid #222;
 }
-
 footer p { margin: 0; }
-
 /* ===== MOBILE HAMBURGER ===== */
 .menu-btn {
   display: none;
@@ -187,19 +161,15 @@ footer p { margin: 0; }
   position: relative;
   z-index: 1100;
 }
-
 /* ===== MOBILE MENU ===== */
 /* Hide mobile menu by default on desktop */
 #mobileMenu {
   display: none;
 }
-
 @media (max-width: 768px) {
   .menu-btn { display: block; }
-
   /* Hide desktop menu */
   .main-nav { display: none; }
-
   /* Show mobile menu */
   #mobileMenu {
     display: block;
@@ -215,23 +185,7 @@ footer p { margin: 0; }
     padding-top: 70px; /* header height */
     overflow-y: auto;
   }
-
   #mobileMenu.open { right: 0; }
-
-  /* Backdrop */
-  #menuBackdrop {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4);
-    z-index: 1040;
-  }
-
-  #menuBackdrop.show { display: block; }
-
   /* Mobile menu list */
   #mobileMenu .menu {
     flex-direction: column;
@@ -239,14 +193,11 @@ footer p { margin: 0; }
     padding: 0;
     margin: 0;
   }
-
   #mobileMenu .menu li { width: 100%; text-align: left; }
-
   #mobileMenu .menu a {
     padding: 12px 20px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
   }
-
   /* Dropdowns in mobile */
   #mobileMenu .dropdown > .dropdown-menu,
   #mobileMenu .dropdown-submenu > .dropdown-menu {
@@ -255,12 +206,10 @@ footer p { margin: 0; }
     transition: max-height 0.3s ease;
     flex-direction: column;
   }
-
   #mobileMenu .dropdown > .dropdown-menu.show,
   #mobileMenu .dropdown-submenu > .dropdown-menu.show {
     max-height: 500px; /* enough for content */
   }
-
   /* Nested submenu padding */
   #mobileMenu .dropdown-submenu > .dropdown-menu a {
     padding-left: 2rem;
