@@ -1,32 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resources - Hifaazati Technologies</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f4; }
-    header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-    nav { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; flex-wrap: wrap; }
-    .logo { font-size: 1.5rem; font-weight: bold; color: white; text-decoration: none; }
-    nav ul { display: flex; list-style: none; gap: 1.0rem; flex-wrap: wrap; }
-    nav a { color: white; text-decoration: none; transition: all 0.3s; padding: 0.4rem 0.7rem; border-radius: 4px; }
-    nav a:hover { background-color: rgba(255,255,255,0.2); transform: translateY(-1px); }
-    .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 3rem 2rem; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 0.6rem; }
-    .hero p { font-size: 1.1rem; max-width: 900px; margin: 0 auto; opacity: 0.95; }
-    .container { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
-    section { background: white; padding: 2rem; margin-bottom: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
-    h2 { color: #1e3c72; font-size: 2rem; margin-bottom: 1rem; border-bottom: 3px solid #2a5298; padding-bottom: 0.4rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
-    .card { background: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid #2a5298; display: grid; gap: .5rem; }
-    .card h3 { margin: 0; color: #1e3c72; }
-    .card p { margin: 0; color: #444; }
-    .btn { display: inline-block; background: linear-gradient(135deg, #1e3c72, #2a5298); color: #fff; padding: .5rem .9rem; border-radius: 6px; text-decoration: none; margin-top: .25rem; }
-    .btn:hover { filter: brightness(1.05); }
-    footer { background: #1e3c72; color: white; text-align: center; padding: 1.5rem; margin-top: 2rem; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -51,77 +29,169 @@
   </header>
 
   <div class="hero">
-    <h1>Resources Library</h1>
-    <p>Datasheets, frameworks, checklists, and media to advance your security program.</p>
+    <h1>Cybersecurity Resources</h1>
+    <p>Curated collection of essential cybersecurity resources, documentation, and learning materials</p>
   </div>
 
   <div class="container">
     <section>
-      <h2>Popular Resources</h2>
+      <h2>Learning Platforms</h2>
       <div class="grid">
         <div class="card">
-          <h3>Threat Modeling Kit</h3>
-          <p>STRIDE/LINDDUN templates and examples for practical workshops.</p>
-          <a class="btn" href="#">Download PDF</a>
+          <h3>Cybrary</h3>
+          <p>Free and paid cybersecurity training with courses covering various security topics and certifications.</p>
         </div>
         <div class="card">
-          <h3>MFA Rollout Playbook</h3>
-          <p>From pilot to org-wide rollout with comms and helpdesk scripts.</p>
-          <a class="btn" href="#">Download PDF</a>
+          <h3>SANS Cyber Aces</h3>
+          <p>Free tutorials covering operating systems, networking, and system administration basics.</p>
         </div>
         <div class="card">
-          <h3>Zero Trust Quickstart</h3>
-          <p>Reference architecture and baseline policies for staged adoption.</p>
-          <a class="btn" href="#">Download PDF</a>
+          <h3>TryHackMe</h3>
+          <p>Hands-on cybersecurity training platform with guided labs and challenges for all skill levels.</p>
+        </div>
+        <div class="card">
+          <h3>HackTheBox</h3>
+          <p>Platform for testing penetration testing skills through realistic scenarios and challenges.</p>
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Framework Mappings</h2>
+      <h2>Documentation & Standards</h2>
       <div class="grid">
         <div class="card">
-          <h3>NIST CSF 2.0</h3>
-          <p>Control mappings tailored for modern cloud-native environments.</p>
-          <a class="btn" href="#">Download PDF</a>
+          <h3>NIST Cybersecurity Framework</h3>
+          <p>Comprehensive framework for improving critical infrastructure cybersecurity.</p>
+        </div>
+        <div class="card">
+          <h3>OWASP Documentation</h3>
+          <p>Open Web Application Security Project's comprehensive security documentation and guidelines.</p>
+        </div>
+        <div class="card">
+          <h3>CIS Controls</h3>
+          <p>Prioritized set of actions for cyber defense providing specific guidance for implementation.</p>
+        </div>
+        <div class="card">
+          <h3>ISO/IEC 27001</h3>
+          <p>International standard for information security management systems.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Security Blogs & News</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Krebs on Security</h3>
+          <p>In-depth security news and investigation by renowned journalist Brian Krebs.</p>
+        </div>
+        <div class="card">
+          <h3>The Hacker News</h3>
+          <p>Breaking cybersecurity news, vulnerabilities, and threat analysis.</p>
+        </div>
+        <div class="card">
+          <h3>Dark Reading</h3>
+          <p>News and analysis on enterprise security, privacy, and risk management.</p>
+        </div>
+        <div class="card">
+          <h3>Threatpost</h3>
+          <p>Breaking news about security threats, vulnerabilities, and cyber attacks.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certification Resources</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>CompTIA Security+</h3>
+          <p>Entry-level certification validating foundational cybersecurity knowledge and skills.</p>
+        </div>
+        <div class="card">
+          <h3>Certified Ethical Hacker (CEH)</h3>
+          <p>Certification for professionals who identify weaknesses and vulnerabilities in systems.</p>
+        </div>
+        <div class="card">
+          <h3>CISSP</h3>
+          <p>Certified Information Systems Security Professional - globally recognized certification.</p>
+        </div>
+        <div class="card">
+          <h3>OSCP</h3>
+          <p>Offensive Security Certified Professional - hands-on penetration testing certification.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Research & Reports</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Verizon DBIR</h3>
+          <p>Annual Data Breach Investigations Report providing comprehensive breach statistics.</p>
         </div>
         <div class="card">
           <h3>MITRE ATT&CK</h3>
-          <p>Detection ideas and coverage matrix for SOC engineering.</p>
-          <a class="btn" href="#">Download PDF</a>
+          <p>Knowledge base of adversary tactics and techniques based on real-world observations.</p>
         </div>
         <div class="card">
-          <h3>PCI DSS 4.0</h3>
-          <p>Gap analysis checklist and auditor-ready evidence list.</p>
-          <a class="btn" href="#">Download PDF</a>
+          <h3>CVE Details</h3>
+          <p>Database of publicly disclosed cybersecurity vulnerabilities and exposures.</p>
+        </div>
+        <div class="card">
+          <h3>SANS Reading Room</h3>
+          <p>Free security research and white papers from SANS Institute students and researchers.</p>
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Videos and Webinars</h2>
+      <h2>Community Resources</h2>
       <div class="grid">
         <div class="card">
-          <h3>Incident Response 101</h3>
-          <p>45-minute walkthrough of IR phases, pitfalls, and playbooks.</p>
-          <a class="btn" href="#">Watch MP4</a>
+          <h3>Reddit r/netsec</h3>
+          <p>Active community discussing network security, vulnerabilities, and security research.</p>
         </div>
         <div class="card">
-          <h3>Hardening Identities</h3>
-          <p>SSO, MFA, device trust, and just-in-time access patterns.</p>
-          <a class="btn" href="#">Watch MP4</a>
+          <h3>Security Stack Exchange</h3>
+          <p>Q&A community for information security professionals and enthusiasts.</p>
         </div>
         <div class="card">
-          <h3>Cloud Security Posture</h3>
-          <p>Guardrails, IaC scanning, and continuous validation techniques.</p>
-          <a class="btn" href="#">Watch MP4</a>
+          <h3>GitHub Security</h3>
+          <p>Collection of open-source security tools, scripts, and projects.</p>
+        </div>
+        <div class="card">
+          <h3>Discord Security Servers</h3>
+          <p>Active Discord communities for real-time discussions about cybersecurity topics.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Practice Environments</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>DVWA</h3>
+          <p>Damn Vulnerable Web Application - intentionally insecure web app for learning.</p>
+        </div>
+        <div class="card">
+          <h3>Metasploitable</h3>
+          <p>Intentionally vulnerable Linux virtual machine for testing security tools.</p>
+        </div>
+        <div class="card">
+          <h3>WebGoat</h3>
+          <p>OWASP's deliberately insecure application for teaching web security lessons.</p>
+        </div>
+        <div class="card">
+          <h3>VulnHub</h3>
+          <p>Collection of vulnerable virtual machines for hands-on penetration testing practice.</p>
         </div>
       </div>
     </section>
   </div>
 
   <footer>
-    © 2025 Hifaazati Technologies. All rights reserved.
+    <p>&copy; 2025 Hifaazati Technologies. All rights reserved.</p>
+    <p>Securing your digital world, one solution at a time.</p>
   </footer>
 </body>
 </html>
