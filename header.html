@@ -5,45 +5,10 @@
 
     <!-- Mobile Menu Toggle -->
     <button id="menuToggle" class="menu-btn" aria-label="Toggle Menu">☰</button>
-
-    <!-- Main Navigation -->
-    <nav id="mainNav" class="main-nav">
-      <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="case-studies.html">Case Studies</a></li>
-        <li><a href="careers.html">Careers</a></li>
-        <li><a href="contact.html">Contact</a></li>
-
-        <!-- Knowledge Base Dropdown -->
-        <li class="dropdown">
-          <a href="#">Knowledge Base ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="Knowledge Base/glossary/glossary.html">Glossary</a></li>
-            <li><a href="Knowledge Base/news/news.html">News</a></li>
-            <li><a href="Knowledge Base/resources/resources.html">Resources</a></li>
-            <li><a href="Knowledge Base/tools/tools.html">Tools</a></li>
-            <li class="dropdown-submenu">
-              <a href="#">Tutorials</a>
-              <ul class="dropdown-menu">
-                <li><a href="Knowledge Base/tutorials/tutorials.html">All Tutorials</a></li>
-                <li><a href="Knowledge Base/tutorials/guides/guides.html">Guides</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-
-        <li><a href="blog/blog.html">Blog</a></li>
-      </ul>
-    </nav>
   </div>
 
-  <!-- Backdrop -->
-  <div id="menuBackdrop" class="menu-backdrop"></div>
-
-  <!-- Mobile Menu Sliding Panel -->
-  <div id="mobileMenu" class="mobile-menu">
+  <!-- Main Desktop Menu -->
+  <nav id="mainNav" class="main-nav">
     <ul class="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -52,7 +17,6 @@
       <li><a href="careers.html">Careers</a></li>
       <li><a href="contact.html">Contact</a></li>
 
-      <!-- Knowledge Base Dropdown -->
       <li class="dropdown">
         <a href="#">Knowledge Base ▾</a>
         <ul class="dropdown-menu">
@@ -72,15 +36,65 @@
 
       <li><a href="blog/blog.html">Blog</a></li>
     </ul>
+  </nav>
+
+  <!-- Mobile Sliding Menu -->
+  <div id="mobileMenu">
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <a href="#">Services</a>
+        <ul class="dropdown-menu">
+          <li><a href="it-service.html">IT Consulting</a></li>
+          <li><a href="ai-service.html">Artificial Intelligence</a></li>
+          <li><a href="cyber-service.html">Cyber Security</a></li>
+          <li><a href="medical-service.html">Medical Coding</a></li>
+          <li><a href="digital-service.html">Digital Marketing</a></li>
+          <li><a href="data-service.html">Data Analysis</a></li>
+          <li><a href="app-service.html">App Development</a></li>
+          <li><a href="cloud-service.html">Cloud Computing</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Technologies</a>
+        <ul class="dropdown-menu">
+          <li><a href="powerbi-tech.html">PowerBI</a></li>
+          <li><a href="sas-tech.html">SAS</a></li>
+          <li><a href="abinitio-tech.html">AB Initio</a></li>
+          <li><a href="fullstack-tech.html">FullStack</a></li>
+          <li><a href="aws-tech.html">AWS</a></li>
+          <li><a href="oracle-tech.html">Oracle</a></li>
+          <li><a href="testing-tech.html">Testing</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Industries</a>
+        <ul class="dropdown-menu">
+          <li><a href="healthcare-sector.html">HealthCare</a></li>
+          <li><a href="outsourcing-sector.html">OutSouring</a></li>
+          <li><a href="banking-sector.html">Banking & Finance</a></li>
+          <li><a href="manufacturing-sector.html">Manufacturing</a></li>
+          <li><a href="retail-sector.html">Retail Solutions</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </div>
+
+  <!-- Backdrop -->
+  <div id="menuBackdrop"></div>
 </header>
 
 <script>
+  // ===== Mobile Menu Toggle =====
   const menuToggle = document.getElementById('menuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
   const backdrop = document.getElementById('menuBackdrop');
 
-  // Open/Close mobile menu
   function toggleMobileMenu() {
     mobileMenu.classList.toggle('open');
     backdrop.classList.toggle('show');
@@ -89,23 +103,20 @@
   menuToggle.addEventListener('click', toggleMobileMenu);
   backdrop.addEventListener('click', toggleMobileMenu);
 
-  // Dropdown toggle inside mobile menu
+  // ===== Dropdown toggle for mobile menu =====
   mobileMenu.querySelectorAll('.dropdown > a').forEach(drop => {
-    drop.addEventListener('click', (e) => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        drop.nextElementSibling.classList.toggle('show');
-      }
+    drop.addEventListener('click', e => {
+      e.preventDefault();
+      drop.nextElementSibling.classList.toggle('show');
     });
   });
 
-  // Nested submenu toggle inside mobile menu
+  // ===== Nested submenu toggle =====
   mobileMenu.querySelectorAll('.dropdown-submenu > a').forEach(sub => {
-    sub.addEventListener('click', (e) => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        sub.nextElementSibling.classList.toggle('show');
-      }
+    sub.addEventListener('click', e => {
+      e.preventDefault();
+      sub.nextElementSibling.classList.toggle('show');
+      sub.classList.toggle('active');
     });
   });
 </script>
