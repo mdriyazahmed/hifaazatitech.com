@@ -1,378 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Studies - Hifaazati Technologies</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        
-        /* Unified Navigation Bar */
-        header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-        }
-        
-        nav a:hover {
-            background-color: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-        
-        section {
-            background: white;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        h2 {
-            color: #1e3c72;
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 3px solid #2a5298;
-            padding-bottom: 0.5rem;
-        }
-        
-        /* Case Studies Grid */
-        .cases-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .case-card {
-            background: #f8f9fa;
-            padding: 2.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #2a5298;
-            transition: transform 0.3s;
-        }
-        
-        .case-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .case-card h3 {
-            color: #1e3c72;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .case-meta {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .case-meta span {
-            background: #e9ecef;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-        }
-        
-        .case-results {
-            background: #e8f5e8;
-            padding: 1rem;
-            border-radius: 4px;
-            margin-top: 1rem;
-            border-left: 3px solid #28a745;
-        }
-        
-        .case-results h4 {
-            color: #155724;
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .case-results ul {
-            margin-left: 1rem;
-            color: #155724;
-        }
-        
-        /* Footer */
-        footer {
-            background: #1e3c72;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-        
-        footer p {
-            margin: 0.5rem 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Studies - Hifaazati Technologies</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a class="logo" href="index.html">Hifaazati Technologies</a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="guides/index.html">Guides</a></li>
-                <li><a href="tutorials/index.html">Tutorials</a></li>
-                <li><a href="news/index.html">News</a></li>
-                <li><a href="tools.html">Tools</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="case-studies.html">Case Studies</a></li>
-                <li><a href="glossary.html">Glossary</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="hero">
-        <h1>Client Success Stories</h1>
-        <p>Real-world cybersecurity transformations with measurable results and lasting impact</p>
-    </div>
-    
-    <div class="container">
-        <section>
-            <h2>Featured Case Studies</h2>
-            <p>Discover how we've helped organizations across industries strengthen their security posture, reduce risk, and achieve compliance goals.</p>
-            
-            <div class="cases-grid">
-                <div class="case-card">
-                    <h3>🏦 Fintech: Ransomware Containment</h3>
-                    <div class="case-meta">
-                        <span>Financial Services</span>
-                        <span>Incident Response</span>
-                        <span>6 Hour Recovery</span>
-                    </div>
-                    <p>Major fintech company faced sophisticated ransomware attack targeting critical payment infrastructure. Our rapid response team contained the threat and restored operations.</p>
-                    
-                    <div class="case-results">
-                        <h4>Key Results:</h4>
-                        <ul>
-                            <li>Contained lateral movement within 6 hours</li>
-                            <li>Restored Tier-0 identity systems</li>
-                            <li>Zero data exfiltration confirmed</li>
-                            <li>Payment systems back online same day</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="case-card">
-                    <h3>🛍️ Retail: PCI DSS 4.0 Compliance</h3>
-                    <div class="case-meta">
-                        <span>Retail & E-commerce</span>
-                        <span>Compliance</span>
-                        <span>120 Days</span>
-                    </div>
-                    <p>Global retail chain needed urgent PCI DSS 4.0 compliance to maintain payment processing capabilities and avoid significant financial penalties.</p>
-                    
-                    <div class="case-results">
-                        <h4>Key Results:</h4>
-                        <ul>
-                            <li>87 control gaps closed systematically</li>
-                            <li>Network segmentation implemented</li>
-                            <li>Passed ROC audit on first attempt</li>
-                            <li>Continuous compliance monitoring established</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="case-card">
-                    <h3>🏥 Healthcare: Zero Trust Identity</h3>
-                    <div class="case-meta">
-                        <span>Healthcare</span>
-                        <span>Identity & Access</span>
-                        <span>92% Reduction</span>
-                    </div>
-                    <p>Healthcare system with 10,000+ users needed modern identity controls to protect patient data and meet HIPAA requirements.</p>
-                    
-                    <div class="case-results">
-                        <h4>Key Results:</h4>
-                        <ul>
-                            <li>SSO with phishing-resistant MFA deployed</li>
-                            <li>Privileged access workflows implemented</li>
-                            <li>92% reduction in account takeovers</li>
-                            <li>Device trust and conditional access enabled</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="case-card">
-                    <h3>💻 SaaS: Detection Engineering</h3>
-                    <div class="case-meta">
-                        <span>Software & SaaS</span>
-                        <span>SOC & Detection</span>
-                        <span>6 Min MTTD</span>
-                    </div>
-                    <p>Fast-growing SaaS company struggled with alert fatigue and missed threats due to poorly tuned detection rules and manual processes.</p>
-                    
-                    <div class="case-results">
-                        <h4>Key Results:</h4>
-                        <ul>
-                            <li>Built automated telemetry pipelines</li>
-                            <li>Unit-tested detection rules</li>
-                            <li>48% reduction in false positives</li>
-                            <li>Mean time to detect under 6 minutes</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="case-card">
-                    <h3>⚡ Energy: Cloud Security Guardrails</h3>
-                    <div class="case-meta">
-                        <span>Energy & Utilities</span>
-                        <span>Cloud Security</span>
-                        <span>Multi-Cloud</span>
-                    </div>
-                    <p>Critical infrastructure provider needed robust cloud security controls across AWS, Azure, and GCP to protect operational technology.</p>
-                    
-                    <div class="case-results">
-                        <h4>Key Results:</h4>
-                        <ul>
-                            <li>Secure landing zones deployed</li>
-                            <li>Service control policies implemented</li>
-                            <li>Network egress controls established</li>
-                            <li>Infrastructure-as-code validation enabled</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="case-card">
-                    <h3>🏢 Manufacturing: OT Security</h3>
-                    <div class="case-meta">
-                        <span>Manufacturing</span>
-                        <span>OT Security</span>
-                        <span>Zero Downtime</span>
-                    </div>
-                    <p>Global manufacturer needed to secure operational technology networks without disrupting critical production processes.</p>
-                    
-                    <div class="case-results">
-                        <h4>Key Results:</h4>
-                        <ul>
-                            <li>Network segmentation without downtime</li>
-                            <li>OT asset discovery and inventory</li>
-                            <li>Threat detection for industrial protocols</li>
-                            <li>Secure remote access for maintenance</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section>
-            <h2>Success Metrics</h2>
-            <div class="cases-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                <div class="case-card">
-                    <h3>98%</h3>
-                    <p><strong>Incident containment within SLA</strong><br/>Average response time under 4 hours for critical incidents</p>
-                </div>
-                <div class="case-card">
-                    <h3>85%</h3>
-                    <p><strong>Reduction in security incidents</strong><br/>Post-implementation improvement across all clients</p>
-                </div>
-                <div class="case-card">
-                    <h3>100%</h3>
-                    <p><strong>Compliance audit success rate</strong><br/>First-time pass rate for all regulatory frameworks</p>
-                </div>
-                <div class="case-card">
-                    <h3>60%</h3>
-                    <p><strong>Cost optimization achieved</strong><br/>Average reduction in security operational costs</p>
-                </div>
-            </div>
-        </section>
-        
-        <section>
-            <h2>Ready to Transform Your Security?</h2>
-            <p>Every organization has unique security challenges. Our proven methodology and experienced team can help you achieve similar results.</p>
-            <p style="margin-top: 1.5rem;">
-                <strong>Contact us today</strong> to discuss your security goals and learn how we can help protect your organization.
-            </p>
-        </section>
-    </div>
-    
-    <footer>
-        <p>© 2025 Hifaazati Technologies. All rights reserved.</p>
-        <p>Securing your digital world, one solution at a time.</p>
-    </footer>
+  <header>
+    <nav>
+      <a class="logo" href="index.html">Hifaazati Technologies</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="guides/index.html">Guides</a></li>
+        <li><a href="tutorials/index.html">Tutorials</a></li>
+        <li><a href="news/index.html">News</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Case Studies</h1>
+    <p>Real-world cybersecurity success stories and lessons learned</p>
+  </div>
+
+  <div class="container">
+    <section>
+      <h2>Featured Success Stories</h2>
+      <p>Explore how we've helped organizations across various industries strengthen their cybersecurity posture and protect against evolving threats.</p>
+    </section>
+
+    <section>
+      <h2>Enterprise Security Transformations</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Fortune 500 Financial Institution</h3>
+          <span class="badge">Finance</span>
+          <p><strong>Challenge:</strong> Outdated security infrastructure with multiple vulnerabilities.</p>
+          <p><strong>Solution:</strong> Comprehensive security audit, zero-trust architecture implementation, and 24/7 monitoring.</p>
+          <p><strong>Result:</strong> 95% reduction in security incidents, enhanced compliance, and improved customer trust.</p>
+        </div>
+        <div class="card">
+          <h3>Healthcare Network Breach Recovery</h3>
+          <span class="badge">Healthcare</span>
+          <p><strong>Challenge:</strong> Major ransomware attack affecting patient data and operations.</p>
+          <p><strong>Solution:</strong> Rapid incident response, data recovery, network segmentation, and staff training.</p>
+          <p><strong>Result:</strong> Full operations restored within 72 hours, improved security posture, zero data loss.</p>
+        </div>
+        <div class="card">
+          <h3>Global Manufacturing Supply Chain</h3>
+          <span class="badge">Manufacturing</span>
+          <p><strong>Challenge:</strong> Supply chain vulnerabilities and third-party security risks.</p>
+          <p><strong>Solution:</strong> Third-party risk assessment, vendor security requirements, and continuous monitoring.</p>
+          <p><strong>Result:</strong> Secured supply chain operations, 80% improvement in vendor security compliance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Small & Medium Business Success</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>E-Commerce Platform Security</h3>
+          <span class="badge">Retail</span>
+          <p><strong>Challenge:</strong> Growing online business with limited security resources.</p>
+          <p><strong>Solution:</strong> Cloud-based security platform, automated threat detection, and PCI DSS compliance.</p>
+          <p><strong>Result:</strong> PCI compliance achieved, 99.9% uptime maintained, customer data protected.</p>
+        </div>
+        <div class="card">
+          <h3>Legal Firm Data Protection</h3>
+          <span class="badge">Legal</span>
+          <p><strong>Challenge:</strong> Sensitive client data requiring highest level of protection.</p>
+          <p><strong>Solution:</strong> End-to-end encryption, secure communication channels, and access controls.</p>
+          <p><strong>Result:</strong> Attorney-client privilege protected, regulatory compliance achieved, zero breaches.</p>
+        </div>
+        <div class="card">
+          <h3>Startup Security Foundation</h3>
+          <span class="badge">Technology</span>
+          <p><strong>Challenge:</strong> New startup needing security from day one on limited budget.</p>
+          <p><strong>Solution:</strong> Security-by-design approach, cost-effective cloud solutions, and scalable architecture.</p>
+          <p><strong>Result:</strong> Investor confidence gained, security foundation for growth, no security debt.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Compliance & Regulatory Success</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>GDPR Compliance Implementation</h3>
+          <span class="badge">Compliance</span>
+          <p><strong>Challenge:</strong> EU operations requiring GDPR compliance within tight deadline.</p>
+          <p><strong>Solution:</strong> Data mapping, privacy controls, consent management, and documentation.</p>
+          <p><strong>Result:</strong> Full GDPR compliance achieved, audit passed, data subject rights implemented.</p>
+        </div>
+        <div class="card">
+          <h3>HIPAA Healthcare Compliance</h3>
+          <span class="badge">Healthcare</span>
+          <p><strong>Challenge:</strong> Medical practice expanding operations needing HIPAA certification.</p>
+          <p><strong>Solution:</strong> Risk analysis, security policies, technical safeguards, and staff training.</p>
+          <p><strong>Result:</strong> HIPAA compliance certified, patient data secured, zero violations.</p>
+        </div>
+        <div class="card">
+          <h3>SOC 2 Certification Journey</h3>
+          <span class="badge">SaaS</span>
+          <p><strong>Challenge:</strong> SaaS company needing SOC 2 certification for enterprise clients.</p>
+          <p><strong>Solution:</strong> Security control implementation, documentation, monitoring, and audit preparation.</p>
+          <p><strong>Result:</strong> SOC 2 Type II certified, enterprise deals closed, competitive advantage gained.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Incident Response & Recovery</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>DDoS Attack Mitigation</h3>
+          <span class="badge">E-Commerce</span>
+          <p><strong>Challenge:</strong> Major DDoS attack during peak sales period threatening revenue.</p>
+          <p><strong>Solution:</strong> Emergency DDoS mitigation, traffic filtering, and scalable infrastructure.</p>
+          <p><strong>Result:</strong> Attack mitigated within 30 minutes, zero revenue loss, improved resilience.</p>
+        </div>
+        <div class="card">
+          <h3>Insider Threat Investigation</h3>
+          <span class="badge">Finance</span>
+          <p><strong>Challenge:</strong> Suspected insider threat with potential data exfiltration.</p>
+          <p><strong>Solution:</strong> Forensic investigation, user activity monitoring, and incident containment.</p>
+          <p><strong>Result:</strong> Threat identified and neutralized, minimal data loss, lessons learned documented.</p>
+        </div>
+        <div class="card">
+          <h3>Business Email Compromise Recovery</h3>
+          <span class="badge">Professional Services</span>
+          <p><strong>Challenge:</strong> Executive email account compromised leading to fraudulent transactions.</p>
+          <p><strong>Solution:</strong> Rapid response, email security enhancement, and staff awareness training.</p>
+          <p><strong>Result:</strong> Account secured, transactions reversed, comprehensive email security implemented.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Lessons Learned</h2>
+      <div class="alert">
+        <p><strong>Key Takeaways from Our Case Studies:</strong></p>
+        <ul>
+          <li>Proactive security measures are significantly more cost-effective than reactive responses</li>
+          <li>Regular security audits and assessments identify vulnerabilities before attackers do</li>
+          <li>Employee training and awareness are critical components of any security program</li>
+          <li>Incident response plans must be tested regularly to ensure effectiveness</li>
+          <li>Security is a continuous journey, not a one-time destination</li>
+          <li>Compliance and security go hand-in-hand for long-term success</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Hifaazati Technologies. All rights reserved.</p>
+    <p>Securing your digital world, one solution at a time.</p>
+  </footer>
 </body>
 </html>
