@@ -98,10 +98,14 @@
       menuBackdrop.classList.toggle('show');
     });
 
-    menuBackdrop.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      menuBackdrop.classList.remove('show');
+    menuBackdrop.addEventListener('click', function(e) {
+      // Only close if you click directly ON the backdrop, NOT inside the menu
+      if (e.target === menuBackdrop) {
+        mobileMenu.classList.remove('open');
+        menuBackdrop.classList.remove('show');
+      }
     });
+
 
     // Dropdown toggle for mobile
     document.querySelectorAll('#mobileMenu .dropdown > a').forEach(drop => {
