@@ -166,18 +166,23 @@ footer p { margin: 0; }
   font-size: 1.8rem;
   color: #fff;
   cursor: pointer;
+  z-index: 1100; /* ensures above menu */
+  position: relative; /* keeps it in place */
 }
 
+/* Main menu collapse/expand */
 @media (max-width: 768px) {
   .menu {
     flex-direction: column;
     width: 100%;
-    display: none;
+    max-height: 0;
+    overflow: hidden;
     background-color: #0d253f;
+    transition: max-height 0.3s ease;
   }
 
   .main-nav.open .menu {
-    display: flex;
+    max-height: 1000px; /* enough for all items */
   }
 
   .menu li {
@@ -185,16 +190,25 @@ footer p { margin: 0; }
     text-align: left;
   }
 
+  /* Dropdowns */
   .dropdown > .dropdown-menu,
   .dropdown-submenu > .dropdown-menu {
     position: static;
     box-shadow: none;
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    display: flex;
     flex-direction: column;
   }
 
   .dropdown > .dropdown-menu.show,
   .dropdown-submenu > .dropdown-menu.show {
-    display: flex;
+    max-height: 500px; /* enough for content */
+  }
+
+  /* Optional: Add padding for nested submenu items */
+  .dropdown-submenu > .dropdown-menu a {
+    padding-left: 2rem;
   }
 }
