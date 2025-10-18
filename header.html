@@ -3,6 +3,7 @@
     <a href="index.html" class="logo">Hifaazati Technologies</a>
     <button id="menuToggle" class="menu-btn" aria-label="Toggle Menu">☰</button>
 
+    <!-- Desktop Menu -->
     <nav id="mainNav" class="main-nav">
       <ul class="menu">
         <li><a href="index.html">Home</a></li>
@@ -34,8 +35,9 @@
     </nav>
   </div>
 
-  <div id="mobileMenu" class="mobile-menu">
-    <div id="menuBackdrop" class="menu-backdrop"></div>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu">
+    <div id="menuBackdrop"></div>
     <ul class="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -64,38 +66,4 @@
       <li><a href="blog/blog.html">Blog</a></li>
     </ul>
   </div>
-
-  <script>
-    // Mobile menu
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuBackdrop = document.getElementById('menuBackdrop');
-
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open');
-      menuBackdrop.classList.toggle('show');
-    });
-
-    menuBackdrop.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      menuBackdrop.classList.remove('show');
-    });
-
-    // Dropdown toggle
-    document.querySelectorAll('#mobileMenu .dropdown > a').forEach(drop => {
-      drop.addEventListener('click', e => {
-        e.preventDefault();
-        drop.nextElementSibling.classList.toggle('show');
-      });
-    });
-
-    // Nested submenu toggle
-    document.querySelectorAll('#mobileMenu .dropdown-submenu > a').forEach(sub => {
-      sub.addEventListener('click', e => {
-        e.preventDefault();
-        sub.nextElementSibling.classList.toggle('show');
-        sub.classList.toggle('active');
-      });
-    });
-  </script>
 </header>
