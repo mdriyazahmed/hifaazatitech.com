@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="nav-container">
     <!-- Logo -->
-    <a href="/home.html" class="logo">Hifaazati Technologies</a>
+    <a href="/index.html" class="logo">Hifaazati Technologies</a>
 
     <!-- Mobile Menu Toggle -->
     <button id="menuToggle" class="menu-btn" aria-label="Toggle Menu">☰</button>
@@ -9,7 +9,7 @@
     <!-- Main Navigation -->
     <nav id="mainNav" class="main-nav">
       <ul class="menu">
-        <li><a href="/home.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
         <li><a href="/about.html">About</a></li>
         <li><a href="/services.html">Services</a></li>
         <li><a href="/case-studies.html">Case Studies</a></li>
@@ -41,21 +41,31 @@
 </header>
 
 <script>
-  // === Responsive Menu Toggle ===
+  // Mobile menu toggle
   const menuToggle = document.getElementById('menuToggle');
   const mainNav = document.getElementById('mainNav');
-
   menuToggle.addEventListener('click', () => {
     mainNav.classList.toggle('open');
   });
 
-  // === Dropdown functionality on mobile ===
+  // Dropdown toggle for mobile
   document.querySelectorAll('.dropdown > a').forEach(drop => {
     drop.addEventListener('click', (e) => {
       if (window.innerWidth <= 768) {
         e.preventDefault();
-        const menu = drop.nextElementSibling;
-        menu.classList.toggle('show');
+        drop.nextElementSibling.classList.toggle('show');
+      }
+    });
+  });
+
+  // Nested submenu toggle for mobile
+  document.querySelectorAll('.dropdown-submenu > a').forEach(sub => {
+    sub.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const submenu = sub.nextElementSibling;
+        submenu.classList.toggle('show');
+        sub.classList.toggle('active');
       }
     });
   });
