@@ -76,15 +76,49 @@
 
   <!-- ===== LOAD HEADER & FOOTER ===== -->
   <script>
-    async function loadHeaderFooter() {
-      const headerHTML = await fetch('header.html').then(res => res.text());
-      document.getElementById('header').innerHTML = headerHTML;
+  async function loadHeaderFooter() {
+    // Load HTML
+    const headerHTML = await fetch('header.html').then(res => res.text());
+    document.getElementById('header').innerHTML = headerHTML;
 
-      const footerHTML = await fetch('footer.html').then(res => res.text());
-      document.getElementById('footer').innerHTML = footerHTML;
-    }
+    const footerHTML = await fetch('footer.html').then(res => res.text());
+    document.getElementById('footer').innerHTML = footerHTML;
 
-    loadHeaderFooter();
-  </script>
+    // ===== MOBILE MENU JS =====
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuBackdrop = document.getElementById('menuBackdrop');
+
+    // Toggle mobile menu
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      menuBackdrop.classList.toggle('show');
+    });
+
+    menuBackdrop.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuBackdrop.classList.remove('show');
+    });
+
+    // Dropdown toggle for mobile
+    document.querySelectorAll('#mobileMenu .dropdown > a').forEach(drop => {
+      drop.addEventListener('click', e => {
+        e.preventDefault();
+        drop.nextElementSibling.classList.toggle('show');
+      });
+    });
+
+    // Nested submenu toggle for mobile
+    document.querySelectorAll('#mobileMenu .dropdown-submenu > a').forEach(sub => {
+      sub.addEventListener('click', e => {
+        e.preventDefault();
+        sub.nextElementSibling.classList.toggle('show');
+        sub.classList.toggle('active');
+      });
+    });
+  }
+
+  loadHeaderFooter();
+</script>
 </body>
 </html>
