@@ -1,275 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Hifaazati Technologies</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        
-        /* Unified Navigation Bar */
-        header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-        }
-        
-        nav a:hover {
-            background-color: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-        
-        section {
-            background: white;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        h2 {
-            color: #1e3c72;
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 3px solid #2a5298;
-            padding-bottom: 0.5rem;
-        }
-        
-        /* Blog Grid */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .blog-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 4px solid #2a5298;
-            transition: transform 0.3s;
-        }
-        
-        .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .blog-card h3 {
-            color: #1e3c72;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .blog-meta {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        .read-more {
-            color: #2a5298;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 1rem;
-        }
-        
-        .read-more:hover {
-            text-decoration: underline;
-        }
-        
-        /* Footer */
-        footer {
-            background: #1e3c72;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-        
-        footer p {
-            margin: 0.5rem 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - Hifaazati Technologies</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <a class="logo" href="index.html">Hifaazati Technologies</a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="guides/index.html">Guides</a></li>
-                <li><a href="tutorials/index.html">Tutorials</a></li>
-                <li><a href="news/index.html">News</a></li>
-                <li><a href="tools.html">Tools</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="case-studies.html">Case Studies</a></li>
-                <li><a href="glossary.html">Glossary</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="hero">
-        <h1>Cybersecurity Blog</h1>
-        <p>Latest insights, trends, and expert analysis in cybersecurity</p>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="nav-bar">
+      <a class="logo" href="index.html">Hifaazati Technologies</a>
+      <button class="menu-btn" id="menuToggle">☰</button>
+      <nav class="top-menu" id="topMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="guides/index.html">Guides</a></li>
+          <li><a href="tutorials/index.html">Tutorials</a></li>
+          <li><a href="news/index.html">News</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    
-    <div class="container">
-        <section>
-            <h2>Latest Articles</h2>
-            <p>Stay updated with the latest cybersecurity news, threat intelligence, and best practices from our team of experts.</p>
-            
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <h3>🔥 Zero Trust Security Architecture</h3>
-                    <div class="blog-meta">October 5, 2025 | Security Architecture</div>
-                    <p>Explore the principles and implementation strategies for Zero Trust security models in modern enterprise environments.</p>
-                    <a href="blog/zero-trust-architecture.html" class="read-more">Read More →</a>
-                </div>
-                
-                <div class="blog-card">
-                    <h3>🚨 Cloud Security Best Practices</h3>
-                    <div class="blog-meta">October 3, 2025 | Cloud Security</div>
-                    <p>Essential security measures and configuration guidelines for securing AWS, Azure, and Google Cloud environments.</p>
-                    <a href="blog/cloud-security-best-practices.html" class="read-more">Read More →</a>
-                </div>
-                
-                <div class="blog-card">
-                    <h3>🛡️ Advanced Threat Detection</h3>
-                    <div class="blog-meta">October 1, 2025 | Threat Intelligence</div>
-                    <p>Modern techniques and tools for detecting sophisticated cyber threats using AI and machine learning.</p>
-                    <a href="blog/advanced-threat-detection.html" class="read-more">Read More →</a>
-                </div>
-                
-                <div class="blog-card">
-                    <h3>📊 SIEM Implementation Guide</h3>
-                    <div class="blog-meta">September 28, 2025 | Security Operations</div>
-                    <p>Complete guide to implementing and optimizing Security Information and Event Management systems.</p>
-                    <a href="blog/siem-implementation-guide.html" class="read-more">Read More →</a>
-                </div>
-                
-                <div class="blog-card">
-                    <h3>🔐 Identity Management Trends</h3>
-                    <div class="blog-meta">September 25, 2025 | Identity Security</div>
-                    <p>Latest trends in identity and access management, including passwordless authentication and biometrics.</p>
-                    <a href="blog/identity-management-trends.html" class="read-more">Read More →</a>
-                </div>
-                
-                <div class="blog-card">
-                    <h3>⚡ Incident Response Playbook</h3>
-                    <div class="blog-meta">September 22, 2025 | Incident Response</div>
-                    <p>Step-by-step incident response procedures and playbooks for common cybersecurity incidents.</p>
-                    <a href="blog/incident-response-playbook.html" class="read-more">Read More →</a>
-                </div>
-            </div>
-        </section>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <div class="hero">
+    <h1>Cybersecurity Blog</h1>
+    <p>Latest insights, trends, and expert analysis in cybersecurity</p>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="container">
+    <section>
+      <h2>Latest Articles</h2>
+      <p>Stay updated with the latest cybersecurity news, threat intelligence, and best practices from our team of experts.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>🔥 Zero Trust Security Architecture</h3>
+          <p><strong>October 5, 2025</strong> | Security Architecture</p>
+          <p>Explore the principles and implementation strategies for Zero Trust security models in modern enterprise environments.</p>
+          <a class="btn" href="#">Read More →</a>
+        </div>
         
-        <section>
-            <h2>Categories</h2>
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <h3>🔒 Security Architecture</h3>
-                    <p>Enterprise security frameworks, design patterns, and architectural best practices.</p>
-                </div>
-                <div class="blog-card">
-                    <h3>☁️ Cloud Security</h3>
-                    <p>Cloud-native security, DevSecOps, and multi-cloud protection strategies.</p>
-                </div>
-                <div class="blog-card">
-                    <h3>🎯 Threat Intelligence</h3>
-                    <p>Latest threat landscapes, attack vectors, and defense mechanisms.</p>
-                </div>
-                <div class="blog-card">
-                    <h3>🚨 Incident Response</h3>
-                    <p>Crisis management, forensics, and recovery procedures.</p>
-                </div>
-            </div>
-        </section>
-    </div>
+        <div class="card">
+          <h3>🚨 Cloud Security Best Practices</h3>
+          <p><strong>October 3, 2025</strong> | Cloud Security</p>
+          <p>Essential security measures and configuration guidelines for securing AWS, Azure, and Google Cloud environments.</p>
+          <a class="btn" href="#">Read More →</a>
+        </div>
+        
+        <div class="card">
+          <h3>🛡️ Advanced Threat Detection</h3>
+          <p><strong>October 1, 2025</strong> | Threat Intelligence</p>
+          <p>Modern techniques and tools for detecting sophisticated cyber threats using AI and machine learning.</p>
+          <a class="btn" href="#">Read More →</a>
+        </div>
+        
+        <div class="card">
+          <h3>📊 SIEM Implementation Guide</h3>
+          <p><strong>September 28, 2025</strong> | Security Operations</p>
+          <p>Complete guide to implementing and optimizing Security Information and Event Management systems.</p>
+          <a class="btn" href="#">Read More →</a>
+        </div>
+        
+        <div class="card">
+          <h3>🔐 Identity Management Trends</h3>
+          <p><strong>September 25, 2025</strong> | Identity Security</p>
+          <p>Latest trends in identity and access management, including passwordless authentication and biometrics.</p>
+          <a class="btn" href="#">Read More →</a>
+        </div>
+        
+        <div class="card">
+          <h3>⚡ Incident Response Playbook</h3>
+          <p><strong>September 22, 2025</strong> | Incident Response</p>
+          <p>Step-by-step incident response procedures and playbooks for common cybersecurity incidents.</p>
+          <a class="btn" href="#">Read More →</a>
+        </div>
+      </div>
+    </section>
     
-    <footer>
-        <p>© 2025 Hifaazati Technologies. All rights reserved.</p>
-        <p>Securing your digital world, one solution at a time.</p>
-    </footer>
+    <section>
+      <h2>Categories</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>🔒 Security Architecture</h3>
+          <p>Enterprise security frameworks, design patterns, and architectural best practices.</p>
+        </div>
+        <div class="card">
+          <h3>☁️ Cloud Security</h3>
+          <p>Cloud-native security, DevSecOps, and multi-cloud protection strategies.</p>
+        </div>
+        <div class="card">
+          <h3>🎯 Threat Intelligence</h3>
+          <p>Latest threat landscapes, attack vectors, and defense mechanisms.</p>
+        </div>
+        <div class="card">
+          <h3>🚨 Incident Response</h3>
+          <p>Crisis management, forensics, and recovery procedures.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Hifaazati Technologies. All rights reserved.</p>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const topMenu = document.querySelector('.top-menu ul');
+    const header = document.querySelector('header');
+
+    // Toggle mobile menu
+    menuToggle.addEventListener('click', () => {
+      topMenu.classList.toggle('show');
+    });
+
+    // Frosted glass scroll effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
