@@ -1,12 +1,8 @@
 <header class="site-header">
   <div class="nav-container">
-    <!-- Logo -->
     <a href="index.html" class="logo">Hifaazati Technologies</a>
-
-    <!-- Hamburger Menu -->
     <button id="menuToggle" class="menu-btn" aria-label="Toggle Menu">☰</button>
 
-    <!-- Desktop Navigation -->
     <nav id="mainNav" class="main-nav">
       <ul class="menu">
         <li><a href="index.html">Home</a></li>
@@ -16,7 +12,6 @@
         <li><a href="careers.html">Careers</a></li>
         <li><a href="contact.html">Contact</a></li>
 
-        <!-- Knowledge Base Dropdown -->
         <li class="dropdown">
           <a href="#">Knowledge Base ▾</a>
           <ul class="dropdown-menu">
@@ -39,7 +34,6 @@
     </nav>
   </div>
 
-  <!-- Mobile Slide-in Menu -->
   <div id="mobileMenu" class="mobile-menu">
     <div id="menuBackdrop" class="menu-backdrop"></div>
     <ul class="menu">
@@ -70,39 +64,38 @@
       <li><a href="blog/blog.html">Blog</a></li>
     </ul>
   </div>
+
+  <script>
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuBackdrop = document.getElementById('menuBackdrop');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      menuBackdrop.classList.toggle('show');
+    });
+
+    menuBackdrop.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuBackdrop.classList.remove('show');
+    });
+
+    // Dropdown toggle
+    document.querySelectorAll('#mobileMenu .dropdown > a').forEach(drop => {
+      drop.addEventListener('click', e => {
+        e.preventDefault();
+        drop.nextElementSibling.classList.toggle('show');
+      });
+    });
+
+    // Nested submenu toggle
+    document.querySelectorAll('#mobileMenu .dropdown-submenu > a').forEach(sub => {
+      sub.addEventListener('click', e => {
+        e.preventDefault();
+        sub.nextElementSibling.classList.toggle('show');
+        sub.classList.toggle('active');
+      });
+    });
+  </script>
 </header>
-
-<script>
-  // Hamburger toggle
-  const menuToggle = document.getElementById('menuToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const menuBackdrop = document.getElementById('menuBackdrop');
-
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open');
-    menuBackdrop.classList.toggle('show');
-  });
-
-  // Close menu on backdrop click
-  menuBackdrop.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    menuBackdrop.classList.remove('show');
-  });
-
-  // Dropdown toggle
-  document.querySelectorAll('#mobileMenu .dropdown > a').forEach(drop => {
-    drop.addEventListener('click', (e) => {
-      e.preventDefault();
-      drop.nextElementSibling.classList.toggle('show');
-    });
-  });
-
-  // Nested submenu toggle
-  document.querySelectorAll('#mobileMenu .dropdown-submenu > a').forEach(sub => {
-    sub.addEventListener('click', (e) => {
-      e.preventDefault();
-      sub.nextElementSibling.classList.toggle('show');
-      sub.classList.toggle('active');
-    });
-  });
-</script>
