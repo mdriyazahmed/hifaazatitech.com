@@ -8,9 +8,14 @@
 </head>
 <body>
   <header>
-    <nav>
+    <button id="menuToggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-bar">
       <a class="logo" href="index.html">Hifaazati Technologies</a>
-      <ul>
+      <ul class="top-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
@@ -27,18 +32,15 @@
       </ul>
     </nav>
   </header>
-
   <div class="hero">
     <h1>Case Studies</h1>
     <p>Real-world cybersecurity success stories and lessons learned</p>
   </div>
-
   <div class="container">
     <section>
       <h2>Featured Success Stories</h2>
       <p>Explore how we've helped organizations across various industries strengthen their cybersecurity posture and protect against evolving threats.</p>
     </section>
-
     <section>
       <h2>Enterprise Security Transformations</h2>
       <div class="grid">
@@ -52,120 +54,121 @@
         <div class="card">
           <h3>Healthcare Network Breach Recovery</h3>
           <span class="badge">Healthcare</span>
-          <p><strong>Challenge:</strong> Major ransomware attack affecting patient data and operations.</p>
-          <p><strong>Solution:</strong> Rapid incident response, data recovery, network segmentation, and staff training.</p>
-          <p><strong>Result:</strong> Full operations restored within 72 hours, improved security posture, zero data loss.</p>
+          <p><strong>Challenge:</strong> Significant data breach affecting patient records.</p>
+          <p><strong>Solution:</strong> Rapid incident response, forensic analysis, security patches, and staff training.</p>
+          <p><strong>Result:</strong> Full recovery within 72 hours, no data loss, and HIPAA compliance restored.</p>
         </div>
         <div class="card">
-          <h3>Global Manufacturing Supply Chain</h3>
+          <h3>Global Manufacturer Ransomware Defense</h3>
           <span class="badge">Manufacturing</span>
-          <p><strong>Challenge:</strong> Supply chain vulnerabilities and third-party security risks.</p>
-          <p><strong>Solution:</strong> Third-party risk assessment, vendor security requirements, and continuous monitoring.</p>
-          <p><strong>Result:</strong> Secured supply chain operations, 80% improvement in vendor security compliance.</p>
+          <p><strong>Challenge:</strong> Targeted ransomware attacks disrupting production.</p>
+          <p><strong>Solution:</strong> Advanced threat detection, network segmentation, and backup recovery systems.</p>
+          <p><strong>Result:</strong> Zero successful attacks in 18 months, 40% reduction in security costs.</p>
         </div>
       </div>
     </section>
-
     <section>
-      <h2>Small & Medium Business Success</h2>
+      <h2>Small to Medium Business Protection</h2>
       <div class="grid">
         <div class="card">
-          <h3>E-Commerce Platform Security</h3>
+          <h3>E-Commerce Platform Security Overhaul</h3>
           <span class="badge">Retail</span>
-          <p><strong>Challenge:</strong> Growing online business with limited security resources.</p>
-          <p><strong>Solution:</strong> Cloud-based security platform, automated threat detection, and PCI DSS compliance.</p>
-          <p><strong>Result:</strong> PCI compliance achieved, 99.9% uptime maintained, customer data protected.</p>
+          <p><strong>Challenge:</strong> Frequent phishing attacks and customer data vulnerabilities.</p>
+          <p><strong>Solution:</strong> Multi-factor authentication, secure payment gateway, and employee training.</p>
+          <p><strong>Result:</strong> 100% reduction in successful phishing attacks and increased customer confidence.</p>
         </div>
         <div class="card">
-          <h3>Legal Firm Data Protection</h3>
+          <h3>Law Firm Data Protection</h3>
           <span class="badge">Legal</span>
-          <p><strong>Challenge:</strong> Sensitive client data requiring highest level of protection.</p>
-          <p><strong>Solution:</strong> End-to-end encryption, secure communication channels, and access controls.</p>
-          <p><strong>Result:</strong> Attorney-client privilege protected, regulatory compliance achieved, zero breaches.</p>
+          <p><strong>Challenge:</strong> Client confidentiality concerns and regulatory compliance.</p>
+          <p><strong>Solution:</strong> End-to-end encryption, secure document management, and access controls.</p>
+          <p><strong>Result:</strong> Full compliance with legal data protection standards and zero breaches.</p>
         </div>
         <div class="card">
-          <h3>Startup Security Foundation</h3>
+          <h3>Tech Startup Security Foundation</h3>
           <span class="badge">Technology</span>
-          <p><strong>Challenge:</strong> New startup needing security from day one on limited budget.</p>
-          <p><strong>Solution:</strong> Security-by-design approach, cost-effective cloud solutions, and scalable architecture.</p>
-          <p><strong>Result:</strong> Investor confidence gained, security foundation for growth, no security debt.</p>
+          <p><strong>Challenge:</strong> Building security into rapid growth phase.</p>
+          <p><strong>Solution:</strong> Security-first architecture, DevSecOps integration, and scalable monitoring.</p>
+          <p><strong>Result:</strong> Secure product launch, investor confidence, and enterprise-ready infrastructure.</p>
         </div>
       </div>
     </section>
-
     <section>
-      <h2>Compliance & Regulatory Success</h2>
+      <h2>Industry-Specific Solutions</h2>
       <div class="grid">
         <div class="card">
-          <h3>GDPR Compliance Implementation</h3>
-          <span class="badge">Compliance</span>
-          <p><strong>Challenge:</strong> EU operations requiring GDPR compliance within tight deadline.</p>
-          <p><strong>Solution:</strong> Data mapping, privacy controls, consent management, and documentation.</p>
-          <p><strong>Result:</strong> Full GDPR compliance achieved, audit passed, data subject rights implemented.</p>
+          <h3>Government Agency Cloud Migration</h3>
+          <span class="badge">Government</span>
+          <p><strong>Challenge:</strong> Secure migration of sensitive data to cloud infrastructure.</p>
+          <p><strong>Solution:</strong> FedRAMP-compliant cloud setup, data classification, and continuous monitoring.</p>
+          <p><strong>Result:</strong> Successful migration with enhanced security and 30% cost savings.</p>
         </div>
         <div class="card">
-          <h3>HIPAA Healthcare Compliance</h3>
-          <span class="badge">Healthcare</span>
-          <p><strong>Challenge:</strong> Medical practice expanding operations needing HIPAA certification.</p>
-          <p><strong>Solution:</strong> Risk analysis, security policies, technical safeguards, and staff training.</p>
-          <p><strong>Result:</strong> HIPAA compliance certified, patient data secured, zero violations.</p>
+          <h3>Educational Institution Network Security</h3>
+          <span class="badge">Education</span>
+          <p><strong>Challenge:</strong> Protecting student data across distributed campus network.</p>
+          <p><strong>Solution:</strong> Network access control, endpoint protection, and security awareness training.</p>
+          <p><strong>Result:</strong> FERPA compliance achieved, zero data breaches, and improved network performance.</p>
         </div>
         <div class="card">
-          <h3>SOC 2 Certification Journey</h3>
-          <span class="badge">SaaS</span>
-          <p><strong>Challenge:</strong> SaaS company needing SOC 2 certification for enterprise clients.</p>
-          <p><strong>Solution:</strong> Security control implementation, documentation, monitoring, and audit preparation.</p>
-          <p><strong>Result:</strong> SOC 2 Type II certified, enterprise deals closed, competitive advantage gained.</p>
+          <h3>Energy Sector SCADA Protection</h3>
+          <span class="badge">Energy</span>
+          <p><strong>Challenge:</strong> Protecting critical infrastructure from cyber threats.</p>
+          <p><strong>Solution:</strong> Industrial control system security, network isolation, and threat intelligence.</p>
+          <p><strong>Result:</strong> Operational technology security enhanced, zero downtime incidents.</p>
         </div>
       </div>
     </section>
-
-    <section>
-      <h2>Incident Response & Recovery</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>DDoS Attack Mitigation</h3>
-          <span class="badge">E-Commerce</span>
-          <p><strong>Challenge:</strong> Major DDoS attack during peak sales period threatening revenue.</p>
-          <p><strong>Solution:</strong> Emergency DDoS mitigation, traffic filtering, and scalable infrastructure.</p>
-          <p><strong>Result:</strong> Attack mitigated within 30 minutes, zero revenue loss, improved resilience.</p>
-        </div>
-        <div class="card">
-          <h3>Insider Threat Investigation</h3>
-          <span class="badge">Finance</span>
-          <p><strong>Challenge:</strong> Suspected insider threat with potential data exfiltration.</p>
-          <p><strong>Solution:</strong> Forensic investigation, user activity monitoring, and incident containment.</p>
-          <p><strong>Result:</strong> Threat identified and neutralized, minimal data loss, lessons learned documented.</p>
-        </div>
-        <div class="card">
-          <h3>Business Email Compromise Recovery</h3>
-          <span class="badge">Professional Services</span>
-          <p><strong>Challenge:</strong> Executive email account compromised leading to fraudulent transactions.</p>
-          <p><strong>Solution:</strong> Rapid response, email security enhancement, and staff awareness training.</p>
-          <p><strong>Result:</strong> Account secured, transactions reversed, comprehensive email security implemented.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Lessons Learned</h2>
-      <div class="alert">
-        <p><strong>Key Takeaways from Our Case Studies:</strong></p>
-        <ul>
-          <li>Proactive security measures are significantly more cost-effective than reactive responses</li>
-          <li>Regular security audits and assessments identify vulnerabilities before attackers do</li>
-          <li>Employee training and awareness are critical components of any security program</li>
-          <li>Incident response plans must be tested regularly to ensure effectiveness</li>
-          <li>Security is a continuous journey, not a one-time destination</li>
-          <li>Compliance and security go hand-in-hand for long-term success</li>
-        </ul>
-      </div>
+    <section class="cta">
+      <h2>Ready to Transform Your Security Posture?</h2>
+      <p>Contact us today to discuss how we can help protect your organization from cyber threats.</p>
+      <a href="contact.html" class="btn">Get Started</a>
     </section>
   </div>
-
   <footer>
-    <p>&copy; 2025 Hifaazati Technologies. All rights reserved.</p>
-    <p>Securing your digital world, one solution at a time.</p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Hifaazati Technologies</h3>
+        <p>Advanced cybersecurity solutions and consulting services</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="guides/index.html">Guides</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Hifaazati Technologies. All rights reserved.</p>
+    </div>
   </footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const topMenu = document.querySelector('.top-menu');
+
+    menuToggle.addEventListener('click', () => {
+      topMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
