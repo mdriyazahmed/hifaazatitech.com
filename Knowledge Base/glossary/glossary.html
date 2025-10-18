@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cybersecurity Glossary - Hifaazati Technologies</title>
-  <link href="main/css/style.css" rel="stylesheet"/>
+  <link href="../../css/style.css" rel="stylesheet"/>
 </head>
 <body>
   <!-- ===== HEADER (Loaded Dynamically) ===== -->
@@ -135,9 +135,9 @@
   <script>
   async function loadHeaderFooter() {
     // Load HTML
-    const headerHTML = await fetch('header.html').then(res => res.text());
+    const headerHTML = await fetch('../../header.html').then(res => res.text());
     document.getElementById('header').innerHTML = headerHTML;
-    const footerHTML = await fetch('footer.html').then(res => res.text());
+    const footerHTML = await fetch('../../footer.html').then(res => res.text());
     document.getElementById('footer').innerHTML = footerHTML;
     
     // ===== MOBILE MENU JS =====
