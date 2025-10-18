@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Hifaazati Technologies - Cybersecurity Solutions</title>
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet"/>
 </head>
 <body>
   <!-- ===== HEADER (Loaded Dynamically) ===== -->
   <div id="header"></div>
-
   <!-- ===== HERO SECTION ===== -->
   <section class="hero">
     <div class="hero-content">
@@ -17,7 +16,6 @@
       <p>Your trusted partner in cybersecurity — protecting your digital assets with cutting-edge solutions and expert guidance.</p>
     </div>
   </section>
-
   <!-- ===== MAIN CONTENT ===== -->
   <main class="container">
     <section id="about">
@@ -28,7 +26,6 @@
       </p>
       <h3>Our Mission: To provide world-class cybersecurity services that empower organizations to operate securely in the digital age.</h3>
     </section>
-
     <section id="services">
       <h2>Our Services</h2>
       <div class="grid">
@@ -41,7 +38,7 @@
           <p>24/7 security monitoring, incident response, and threat management to keep your systems protected around the clock.</p>
         </div>
         <div class="card">
-          <h3>🔐 Compliance &amp; Risk Management</h3>
+          <h3>🔐 Compliance & Risk Management</h3>
           <p>Expert guidance to ensure your organization meets industry standards and regulatory requirements for data protection.</p>
         </div>
         <div class="card">
@@ -58,21 +55,18 @@
         </div>
       </div>
     </section>
-
     <section id="contact">
       <h2>Contact Us</h2>
       <p>Ready to secure your digital future? Get in touch with our team of cybersecurity experts.</p>
       <p>
-        <strong>Email:</strong> info@hifaazatitech.com<br />
-        <strong>Phone:</strong> +1 (555) 123-4567<br />
-        <strong>Location:</strong> Serving clients worldwide
+        Email: info@hifaazatitech.com<br>
+        Phone: +1 (555) 123-4567<br>
+        Location: Serving clients worldwide
       </p>
     </section>
   </main>
-
   <!-- ===== FOOTER (Loaded Dynamically) ===== -->
   <div id="footer"></div>
-
   <!-- ===== LOAD HEADER & FOOTER ===== -->
   <script>
   async function loadHeaderFooter() {
@@ -81,33 +75,15 @@
     document.getElementById('header').innerHTML = headerHTML;
     const footerHTML = await fetch('footer.html').then(res => res.text());
     document.getElementById('footer').innerHTML = footerHTML;
-
-    // ===== MOBILE MENU JS =====
-    // FIX: Event listeners MUST be attached AFTER header.html is dynamically loaded
-    // Reason: The hamburger menu elements (menuToggle, mobileMenu, menuBackdrop) 
-    // don't exist in the DOM until header.html is loaded and inserted via innerHTML.
-    // Attempting to attach listeners before the header loads will result in null references.
     
+    // ===== MOBILE MENU JS =====
     // Get elements
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
-    const menuBackdrop = document.getElementById('menuBackdrop');
     
-    // Toggle menu open/close
+    // Toggle menu open/close - only hamburger controls menu
     menuToggle.addEventListener('click', () => {
       mobileMenu.classList.toggle('open');
-      menuBackdrop.classList.toggle('show');
-    });
-    
-    // Prevent backdrop click from closing the menu when clicking inside the menu
-    mobileMenu.addEventListener('click', function(e) {
-      e.stopPropagation();
-    });
-    
-    // Only close menu when clicking on backdrop (outside menu)
-    menuBackdrop.addEventListener('click', function() {
-      mobileMenu.classList.remove('open');
-      menuBackdrop.classList.remove('show');
     });
     
     // Dropdowns for mobile
@@ -127,7 +103,6 @@
       });
     });
   }
-
   loadHeaderFooter();
   </script>
 </body>
