@@ -25,7 +25,7 @@
             <li><a href="Knowledge Base/resources/resources.html">Resources</a></li>
             <li><a href="Knowledge Base/tools/tools.html">Tools</a></li>
             <li class="dropdown-submenu">
-              <a href="#">Tutorials </a>
+              <a href="#">Tutorials ▸</a>
               <ul class="dropdown-menu">
                 <li><a href="Knowledge Base/tutorials/tutorials.html">All Tutorials</a></li>
                 <li><a href="Knowledge Base/tutorials/guides/guides.html">Guides</a></li>
@@ -41,14 +41,15 @@
 </header>
 
 <script>
-  // Mobile menu toggle
+  // ===== Mobile Menu Toggle =====
   const menuToggle = document.getElementById('menuToggle');
   const mainNav = document.getElementById('mainNav');
+
   menuToggle.addEventListener('click', () => {
     mainNav.classList.toggle('open');
   });
 
-  // Dropdown toggle for mobile
+  // ===== Dropdown toggle for mobile =====
   document.querySelectorAll('.dropdown > a').forEach(drop => {
     drop.addEventListener('click', (e) => {
       if (window.innerWidth <= 768) {
@@ -58,14 +59,13 @@
     });
   });
 
-  // Nested submenu toggle for mobile
+  // ===== Nested submenu toggle for mobile =====
   document.querySelectorAll('.dropdown-submenu > a').forEach(sub => {
     sub.addEventListener('click', (e) => {
       if (window.innerWidth <= 768) {
         e.preventDefault();
         const submenu = sub.nextElementSibling;
         submenu.classList.toggle('show');
-        sub.classList.toggle('active');
       }
     });
   });
