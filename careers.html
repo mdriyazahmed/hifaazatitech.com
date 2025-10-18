@@ -1,348 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers - Hifaazati Technologies</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        
-        /* Unified Navigation Bar */
-        header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-        }
-        
-        nav a:hover {
-            background-color: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-        
-        section {
-            background: white;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        h2 {
-            color: #1e3c72;
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 3px solid #2a5298;
-            padding-bottom: 0.5rem;
-        }
-        
-        /* Job Listings */
-        .jobs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .job-card {
-            background: #f8f9fa;
-            padding: 2.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #2a5298;
-            transition: transform 0.3s;
-        }
-        
-        .job-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .job-card h3 {
-            color: #1e3c72;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .job-meta {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .job-meta span {
-            background: #e9ecef;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-        }
-        
-        .apply-btn {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 4px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 1rem;
-            transition: transform 0.3s;
-        }
-        
-        .apply-btn:hover {
-            transform: translateY(-2px);
-        }
-        
-        /* Benefits Grid */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .benefit-item {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .benefit-item h4 {
-            color: #1e3c72;
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Footer */
-        footer {
-            background: #1e3c72;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-        
-        footer p {
-            margin: 0.5rem 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers - Hifaazati Technologies</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a class="logo" href="index.html">Hifaazati Technologies</a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="guides/index.html">Guides</a></li>
-                <li><a href="tutorials/index.html">Tutorials</a></li>
-                <li><a href="news/index.html">News</a></li>
-                <li><a href="tools.html">Tools</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="case-studies.html">Case Studies</a></li>
-                <li><a href="glossary.html">Glossary</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="hero">
-        <h1>Join Our Team</h1>
-        <p>Build the future of cybersecurity with passionate professionals committed to protecting digital assets</p>
-    </div>
-    
-    <div class="container">
-        <section>
-            <h2>Current Openings</h2>
-            <p>We're looking for talented individuals to join our mission of securing the digital world. Explore opportunities across various cybersecurity disciplines.</p>
-            
-            <div class="jobs-grid">
-                <div class="job-card">
-                    <h3>🔒 Senior Security Engineer</h3>
-                    <div class="job-meta">
-                        <span>Full-time</span>
-                        <span>Remote/Hybrid</span>
-                        <span>5+ years exp</span>
-                    </div>
-                    <p>Lead security architecture design, vulnerability assessments, and incident response. Expertise in cloud security, threat modeling, and security frameworks required.</p>
-                    <a href="#apply" class="apply-btn">Apply Now</a>
-                </div>
-                
-                <div class="job-card">
-                    <h3>🚨 SOC Analyst Level 2</h3>
-                    <div class="job-meta">
-                        <span>Full-time</span>
-                        <span>On-site</span>
-                        <span>2-4 years exp</span>
-                    </div>
-                    <p>Monitor and analyze security events, investigate incidents, and develop detection rules. Experience with SIEM tools and threat hunting preferred.</p>
-                    <a href="#apply" class="apply-btn">Apply Now</a>
-                </div>
-                
-                <div class="job-card">
-                    <h3>☁️ Cloud Security Architect</h3>
-                    <div class="job-meta">
-                        <span>Full-time</span>
-                        <span>Remote</span>
-                        <span>7+ years exp</span>
-                    </div>
-                    <p>Design and implement security controls for multi-cloud environments. Deep expertise in AWS, Azure, and GCP security services required.</p>
-                    <a href="#apply" class="apply-btn">Apply Now</a>
-                </div>
-                
-                <div class="job-card">
-                    <h3>🔍 Penetration Tester</h3>
-                    <div class="job-meta">
-                        <span>Full-time</span>
-                        <span>Hybrid</span>
-                        <span>3-5 years exp</span>
-                    </div>
-                    <p>Conduct comprehensive security assessments, web application testing, and red team exercises. OSCP or similar certifications preferred.</p>
-                    <a href="#apply" class="apply-btn">Apply Now</a>
-                </div>
-                
-                <div class="job-card">
-                    <h3>📊 Security Consultant</h3>
-                    <div class="job-meta">
-                        <span>Full-time</span>
-                        <span>Travel Required</span>
-                        <span>4+ years exp</span>
-                    </div>
-                    <p>Provide expert cybersecurity advice to clients, conduct risk assessments, and implement security frameworks. Strong communication skills essential.</p>
-                    <a href="#apply" class="apply-btn">Apply Now</a>
-                </div>
-                
-                <div class="job-card">
-                    <h3>🎓 Junior Security Analyst</h3>
-                    <div class="job-meta">
-                        <span>Full-time</span>
-                        <span>On-site</span>
-                        <span>Entry Level</span>
-                    </div>
-                    <p>Learn and grow in cybersecurity operations, assist with monitoring and incident response. Perfect for recent graduates or career changers.</p>
-                    <a href="#apply" class="apply-btn">Apply Now</a>
-                </div>
-            </div>
-        </section>
-        
-        <section>
-            <h2>Why Work With Us?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <h4>💰 Competitive Compensation</h4>
-                    <p>Industry-leading salaries with performance bonuses and equity options</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>🏥 Flexible Work</h4>
-                    <p>Remote-first culture with flexible hours and work-life balance</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>🎓 Learning & Development</h4>
-                    <p>Continuous learning opportunities, certifications, and conference attendance</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>🏥 Comprehensive Benefits</h4>
-                    <p>Health, dental, vision insurance plus retirement planning</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>🚀 Cutting-edge Technology</h4>
-                    <p>Work with the latest security tools and technologies</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>🌍 Impact & Mission</h4>
-                    <p>Meaningful work protecting organizations from cyber threats</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="apply">
-            <h2>How to Apply</h2>
-            <p>Ready to join our team? Send your resume and a cover letter explaining why you're passionate about cybersecurity to:</p>
-            <p style="font-size: 1.2rem; color: #2a5298; font-weight: bold; margin: 1rem 0;">careers@hifaazatitech.com</p>
-            <p>We are an equal opportunity employer committed to diversity and inclusion. All qualified applicants will receive consideration for employment regardless of race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or veteran status.</p>
-        </section>
-    </div>
-    
-    <footer>
-        <p>© 2025 Hifaazati Technologies. All rights reserved.</p>
-        <p>Securing your digital world, one solution at a time.</p>
-    </footer>
+  <header>
+    <nav>
+      <a class="logo" href="index.html">Hifaazati Technologies</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="guides/index.html">Guides</a></li>
+        <li><a href="tutorials/index.html">Tutorials</a></li>
+        <li><a href="news/index.html">News</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Join Our Team</h1>
+    <p>Build a rewarding career protecting organizations from cyber threats</p>
+  </div>
+
+  <div class="container">
+    <section>
+      <h2>Why Work With Us?</h2>
+      <p>At Hifaazati Technologies, we're not just protecting systems - we're safeguarding the digital future. Join a team of passionate cybersecurity professionals committed to making the digital world safer.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>📈 Growth Opportunities</h3>
+          <p>Continuous learning, certifications, training, and career advancement in a rapidly evolving field.</p>
+        </div>
+        <div class="card">
+          <h3>🤝 Collaborative Culture</h3>
+          <p>Work alongside industry experts in a supportive, innovative, and inclusive environment.</p>
+        </div>
+        <div class="card">
+          <h3>🏖 Work-Life Balance</h3>
+          <p>Flexible schedules, remote work options, and a healthy work-life integration.</p>
+        </div>
+        <div class="card">
+          <h3>💰 Competitive Benefits</h3>
+          <p>Industry-leading compensation, health insurance, retirement plans, and more.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Open Positions</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Senior Security Analyst</h3>
+          <span class="badge">Full-Time</span>
+          <p><strong>Location:</strong> Remote/Hybrid</p>
+          <p><strong>Experience:</strong> 5+ years</p>
+          <p>Lead security operations, threat hunting, and incident response for enterprise clients.</p>
+          <p><strong>Requirements:</strong> CISSP, CEH, or equivalent certifications. Experience with SIEM tools and threat intelligence platforms.</p>
+        </div>
+        <div class="card">
+          <h3>Penetration Tester</h3>
+          <span class="badge">Full-Time</span>
+          <p><strong>Location:</strong> On-site</p>
+          <p><strong>Experience:</strong> 3-5 years</p>
+          <p>Conduct security assessments, penetration testing, and vulnerability research for diverse clients.</p>
+          <p><strong>Requirements:</strong> OSCP, CEH, or equivalent. Strong knowledge of testing methodologies and tools.</p>
+        </div>
+        <div class="card">
+          <h3>Security Engineer</h3>
+          <span class="badge">Full-Time</span>
+          <p><strong>Location:</strong> Hybrid</p>
+          <p><strong>Experience:</strong> 3-5 years</p>
+          <p>Design and implement security architecture, systems hardening, and cloud security solutions.</p>
+          <p><strong>Requirements:</strong> Experience with AWS/Azure security, IaC, and security automation.</p>
+        </div>
+        <div class="card">
+          <h3>SOC Analyst</h3>
+          <span class="badge">Full-Time</span>
+          <p><strong>Location:</strong> On-site</p>
+          <p><strong>Experience:</strong> 1-3 years</p>
+          <p>Monitor security alerts, investigate incidents, and support 24/7 security operations center.</p>
+          <p><strong>Requirements:</strong> Security+, network security knowledge, and understanding of threat landscape.</p>
+        </div>
+        <div class="card">
+          <h3>Cybersecurity Consultant</h3>
+          <span class="badge">Full-Time</span>
+          <p><strong>Location:</strong> Remote</p>
+          <p><strong>Experience:</strong> 5+ years</p>
+          <p>Advise clients on security strategy, compliance requirements, and risk management.</p>
+          <p><strong>Requirements:</strong> CISM, CRISC, or equivalent. Strong communication and client management skills.</p>
+        </div>
+        <div class="card">
+          <h3>Incident Response Specialist</h3>
+          <span class="badge">Full-Time</span>
+          <p><strong>Location:</strong> Hybrid</p>
+          <p><strong>Experience:</strong> 3-5 years</p>
+          <p>Lead incident response efforts, forensic analysis, and security breach containment.</p>
+          <p><strong>Requirements:</strong> GCIH, GCFE, or equivalent. Experience with digital forensics and malware analysis.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Internship Opportunities</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Security Operations Intern</h3>
+          <span class="badge">Internship</span>
+          <p><strong>Duration:</strong> 6 months</p>
+          <p><strong>Location:</strong> Hybrid</p>
+          <p>Gain hands-on experience in security monitoring, threat analysis, and incident response.</p>
+          <p><strong>Requirements:</strong> Currently pursuing degree in cybersecurity, CS, or related field. Passion for security.</p>
+        </div>
+        <div class="card">
+          <h3>Application Security Intern</h3>
+          <span class="badge">Internship</span>
+          <p><strong>Duration:</strong> 6 months</p>
+          <p><strong>Location:</strong> Remote</p>
+          <p>Learn about secure coding practices, web application testing, and security code reviews.</p>
+          <p><strong>Requirements:</strong> Programming experience and interest in application security.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What We Offer</h2>
+      <ul>
+        <li><strong>Competitive Salary:</strong> Industry-leading compensation packages based on experience and expertise</li>
+        <li><strong>Health Benefits:</strong> Comprehensive medical, dental, and vision insurance</li>
+        <li><strong>Retirement Plans:</strong> 401(k) with company matching</li>
+        <li><strong>Professional Development:</strong> Training, certifications, and conference attendance support</li>
+        <li><strong>Flexible Work:</strong> Remote and hybrid options available for most positions</li>
+        <li><strong>Paid Time Off:</strong> Generous PTO, sick leave, and paid holidays</li>
+        <li><strong>Latest Technology:</strong> Access to cutting-edge security tools and technologies</li>
+        <li><strong>Team Building:</strong> Regular team events, hackathons, and social activities</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Our Hiring Process</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>1. Application</h3>
+          <p>Submit your resume and cover letter highlighting your experience and passion for cybersecurity.</p>
+        </div>
+        <div class="card">
+          <h3>2. Initial Screening</h3>
+          <p>Phone interview with our recruitment team to discuss your background and career goals.</p>
+        </div>
+        <div class="card">
+          <h3>3. Technical Assessment</h3>
+          <p>Hands-on technical evaluation or challenge relevant to the position.</p>
+        </div>
+        <div class="card">
+          <h3>4. Team Interview</h3>
+          <p>Meet with team members and hiring managers to discuss role and team fit.</p>
+        </div>
+        <div class="card">
+          <h3>5. Final Interview</h3>
+          <p>Discussion with leadership about career aspirations and company culture.</p>
+        </div>
+        <div class="card">
+          <h3>6. Offer</h3>
+          <p>Receive offer letter with compensation details and benefits information.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Apply Now</h2>
+      <p>Ready to take the next step in your cybersecurity career? Send your resume and cover letter to <strong>careers@hifaazatitech.com</strong> with the position title in the subject line.</p>
+      <p>We're an equal opportunity employer committed to diversity and inclusion in the workplace. All qualified applicants will receive consideration without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or veteran status.</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Hifaazati Technologies. All rights reserved.</p>
+    <p>Securing your digital world, one solution at a time.</p>
+  </footer>
 </body>
 </html>
