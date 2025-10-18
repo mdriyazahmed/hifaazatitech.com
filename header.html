@@ -1,0 +1,62 @@
+<header class="site-header">
+  <div class="nav-container">
+    <!-- Logo -->
+    <a href="/home.html" class="logo">Hifaazati Technologies</a>
+
+    <!-- Mobile Menu Toggle -->
+    <button id="menuToggle" class="menu-btn" aria-label="Toggle Menu">☰</button>
+
+    <!-- Main Navigation -->
+    <nav id="mainNav" class="main-nav">
+      <ul class="menu">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/case-studies.html">Case Studies</a></li>
+        <li><a href="/careers.html">Careers</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+
+        <!-- Knowledge Base Dropdown -->
+        <li class="dropdown">
+          <a href="#">Knowledge Base ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="/Knowledge Base/glossary/glossary.html">Glossary</a></li>
+            <li><a href="/Knowledge Base/news/news.html">News</a></li>
+            <li><a href="/Knowledge Base/resources/resources.html">Resources</a></li>
+            <li><a href="/Knowledge Base/tools/tools.html">Tools</a></li>
+            <li class="dropdown-submenu">
+              <a href="#">Tutorials ▸</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Knowledge Base/tutorials/tutorials.html">All Tutorials</a></li>
+                <li><a href="/Knowledge Base/tutorials/guides/guides.html">Guides</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="/blog/blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // === Responsive Menu Toggle ===
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+  });
+
+  // === Dropdown functionality on mobile ===
+  document.querySelectorAll('.dropdown > a').forEach(drop => {
+    drop.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const menu = drop.nextElementSibling;
+        menu.classList.toggle('show');
+      }
+    });
+  });
+</script>
