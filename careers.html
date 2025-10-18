@@ -8,9 +8,14 @@
 </head>
 <body>
   <header>
-    <nav>
+    <button id="menuToggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-bar">
       <a class="logo" href="index.html">Hifaazati Technologies</a>
-      <ul>
+      <ul class="top-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
@@ -27,12 +32,10 @@
       </ul>
     </nav>
   </header>
-
   <div class="hero">
     <h1>Join Our Team</h1>
     <p>Build a rewarding career protecting organizations from cyber threats</p>
   </div>
-
   <div class="container">
     <section>
       <h2>Why Work With Us?</h2>
@@ -52,91 +55,66 @@
         </div>
         <div class="card">
           <h3>💰 Competitive Benefits</h3>
-          <p>Industry-leading compensation, health insurance, retirement plans, and more.</p>
+          <p>Industry-leading compensation packages, comprehensive health insurance, and retirement plans.</p>
         </div>
       </div>
     </section>
-
     <section>
-      <h2>Open Positions</h2>
+      <h2>Current Openings</h2>
       <div class="grid">
         <div class="card">
           <h3>Senior Security Analyst</h3>
-          <span class="badge">Full-Time</span>
-          <p><strong>Location:</strong> Remote/Hybrid</p>
-          <p><strong>Experience:</strong> 5+ years</p>
-          <p>Lead security operations, threat hunting, and incident response for enterprise clients.</p>
-          <p><strong>Requirements:</strong> CISSP, CEH, or equivalent certifications. Experience with SIEM tools and threat intelligence platforms.</p>
+          <span class="badge">Full-time</span>
+          <p><strong>Location:</strong> Remote / Hybrid</p>
+          <p><strong>Experience:</strong> 5+ years in cybersecurity</p>
+          <p>Lead security assessments, incident response, and threat intelligence operations.</p>
+          <a href="contact.html" class="btn">Apply Now</a>
         </div>
         <div class="card">
           <h3>Penetration Tester</h3>
-          <span class="badge">Full-Time</span>
-          <p><strong>Location:</strong> On-site</p>
-          <p><strong>Experience:</strong> 3-5 years</p>
-          <p>Conduct security assessments, penetration testing, and vulnerability research for diverse clients.</p>
-          <p><strong>Requirements:</strong> OSCP, CEH, or equivalent. Strong knowledge of testing methodologies and tools.</p>
+          <span class="badge">Full-time</span>
+          <p><strong>Location:</strong> On-site / Hybrid</p>
+          <p><strong>Experience:</strong> 3+ years in penetration testing</p>
+          <p>Conduct ethical hacking and vulnerability assessments for enterprise clients.</p>
+          <a href="contact.html" class="btn">Apply Now</a>
         </div>
         <div class="card">
-          <h3>Security Engineer</h3>
-          <span class="badge">Full-Time</span>
-          <p><strong>Location:</strong> Hybrid</p>
-          <p><strong>Experience:</strong> 3-5 years</p>
-          <p>Design and implement security architecture, systems hardening, and cloud security solutions.</p>
-          <p><strong>Requirements:</strong> Experience with AWS/Azure security, IaC, and security automation.</p>
-        </div>
-        <div class="card">
-          <h3>SOC Analyst</h3>
-          <span class="badge">Full-Time</span>
-          <p><strong>Location:</strong> On-site</p>
-          <p><strong>Experience:</strong> 1-3 years</p>
-          <p>Monitor security alerts, investigate incidents, and support 24/7 security operations center.</p>
-          <p><strong>Requirements:</strong> Security+, network security knowledge, and understanding of threat landscape.</p>
-        </div>
-        <div class="card">
-          <h3>Cybersecurity Consultant</h3>
-          <span class="badge">Full-Time</span>
+          <h3>SOC Engineer</h3>
+          <span class="badge">Full-time</span>
           <p><strong>Location:</strong> Remote</p>
-          <p><strong>Experience:</strong> 5+ years</p>
-          <p>Advise clients on security strategy, compliance requirements, and risk management.</p>
-          <p><strong>Requirements:</strong> CISM, CRISC, or equivalent. Strong communication and client management skills.</p>
+          <p><strong>Experience:</strong> 2+ years in security operations</p>
+          <p>Monitor security events, analyze threats, and coordinate incident response activities.</p>
+          <a href="contact.html" class="btn">Apply Now</a>
         </div>
         <div class="card">
-          <h3>Incident Response Specialist</h3>
-          <span class="badge">Full-Time</span>
+          <h3>Cloud Security Architect</h3>
+          <span class="badge">Full-time</span>
           <p><strong>Location:</strong> Hybrid</p>
-          <p><strong>Experience:</strong> 3-5 years</p>
-          <p>Lead incident response efforts, forensic analysis, and security breach containment.</p>
-          <p><strong>Requirements:</strong> GCIH, GCFE, or equivalent. Experience with digital forensics and malware analysis.</p>
+          <p><strong>Experience:</strong> 7+ years in cloud security</p>
+          <p>Design and implement security architectures for cloud-based infrastructure and applications.</p>
+          <a href="contact.html" class="btn">Apply Now</a>
+        </div>
+        <div class="card">
+          <h3>Security Consultant</h3>
+          <span class="badge">Full-time</span>
+          <p><strong>Location:</strong> Remote / Hybrid</p>
+          <p><strong>Experience:</strong> 4+ years in security consulting</p>
+          <p>Provide strategic security guidance and risk assessment services to clients.</p>
+          <a href="contact.html" class="btn">Apply Now</a>
+        </div>
+        <div class="card">
+          <h3>Cybersecurity Intern</h3>
+          <span class="badge">Internship</span>
+          <p><strong>Location:</strong> Remote / On-site</p>
+          <p><strong>Experience:</strong> Currently pursuing degree in Cybersecurity or related field</p>
+          <p>Gain hands-on experience in various aspects of cybersecurity operations.</p>
+          <a href="contact.html" class="btn">Apply Now</a>
         </div>
       </div>
     </section>
-
     <section>
-      <h2>Internship Opportunities</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Security Operations Intern</h3>
-          <span class="badge">Internship</span>
-          <p><strong>Duration:</strong> 6 months</p>
-          <p><strong>Location:</strong> Hybrid</p>
-          <p>Gain hands-on experience in security monitoring, threat analysis, and incident response.</p>
-          <p><strong>Requirements:</strong> Currently pursuing degree in cybersecurity, CS, or related field. Passion for security.</p>
-        </div>
-        <div class="card">
-          <h3>Application Security Intern</h3>
-          <span class="badge">Internship</span>
-          <p><strong>Duration:</strong> 6 months</p>
-          <p><strong>Location:</strong> Remote</p>
-          <p>Learn about secure coding practices, web application testing, and security code reviews.</p>
-          <p><strong>Requirements:</strong> Programming experience and interest in application security.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>What We Offer</h2>
+      <h2>Benefits & Perks</h2>
       <ul>
-        <li><strong>Competitive Salary:</strong> Industry-leading compensation packages based on experience and expertise</li>
         <li><strong>Health Benefits:</strong> Comprehensive medical, dental, and vision insurance</li>
         <li><strong>Retirement Plans:</strong> 401(k) with company matching</li>
         <li><strong>Professional Development:</strong> Training, certifications, and conference attendance support</li>
@@ -146,47 +124,77 @@
         <li><strong>Team Building:</strong> Regular team events, hackathons, and social activities</li>
       </ul>
     </section>
-
     <section>
       <h2>Our Hiring Process</h2>
       <div class="grid">
         <div class="card">
-          <h3>1. Application</h3>
-          <p>Submit your resume and cover letter highlighting your experience and passion for cybersecurity.</p>
+          <h3>1. Application Review</h3>
+          <p>Submit your resume and cover letter. Our team reviews applications within 5 business days.</p>
         </div>
         <div class="card">
-          <h3>2. Initial Screening</h3>
-          <p>Phone interview with our recruitment team to discuss your background and career goals.</p>
+          <h3>2. Initial Interview</h3>
+          <p>Phone or video screening with our HR team to discuss your background and the role.</p>
         </div>
         <div class="card">
           <h3>3. Technical Assessment</h3>
-          <p>Hands-on technical evaluation or challenge relevant to the position.</p>
+          <p>Complete a skills assessment or technical challenge relevant to the position.</p>
         </div>
         <div class="card">
           <h3>4. Team Interview</h3>
-          <p>Meet with team members and hiring managers to discuss role and team fit.</p>
-        </div>
-        <div class="card">
-          <h3>5. Final Interview</h3>
-          <p>Discussion with leadership about career aspirations and company culture.</p>
-        </div>
-        <div class="card">
-          <h3>6. Offer</h3>
-          <p>Receive offer letter with compensation details and benefits information.</p>
+          <p>Meet with team members and hiring manager to discuss projects, culture, and expectations.</p>
         </div>
       </div>
     </section>
-
-    <section>
-      <h2>Apply Now</h2>
-      <p>Ready to take the next step in your cybersecurity career? Send your resume and cover letter to <strong>careers@hifaazatitech.com</strong> with the position title in the subject line.</p>
-      <p>We're an equal opportunity employer committed to diversity and inclusion in the workplace. All qualified applicants will receive consideration without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or veteran status.</p>
+    <section class="cta">
+      <h2>Ready to Join Our Team?</h2>
+      <p>Don't see a position that matches your skills? Send us your resume and we'll keep you in mind for future opportunities.</p>
+      <a href="contact.html" class="btn">Get in Touch</a>
     </section>
   </div>
-
   <footer>
-    <p>&copy; 2025 Hifaazati Technologies. All rights reserved.</p>
-    <p>Securing your digital world, one solution at a time.</p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Hifaazati Technologies</h3>
+        <p>Advanced cybersecurity solutions and consulting services</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="guides/index.html">Guides</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Hifaazati Technologies. All rights reserved.</p>
+    </div>
   </footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const topMenu = document.querySelector('.top-menu');
+
+    menuToggle.addEventListener('click', () => {
+      topMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
