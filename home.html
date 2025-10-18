@@ -8,13 +8,15 @@
 </head>
 
 <body>
-  <!-- ===== HEADER (Auto Loaded) ===== -->
+  <!-- ===== HEADER (Loaded Dynamically) ===== -->
   <div id="header"></div>
 
-  <!-- ===== HERO ===== -->
+  <!-- ===== HERO SECTION ===== -->
   <section class="hero">
-    <h1>Welcome to Hifaazati Technologies</h1>
-    <p>Your Trusted Partner in Cybersecurity Solutions — Protecting Your Digital Assets with Cutting-Edge Security Services.</p>
+    <div class="hero-content">
+      <h1>Welcome to Hifaazati Technologies</h1>
+      <p>Your trusted partner in cybersecurity — protecting your digital assets with cutting-edge solutions and expert guidance.</p>
+    </div>
   </section>
 
   <!-- ===== MAIN CONTENT ===== -->
@@ -69,41 +71,24 @@
     </section>
   </main>
 
-  <!-- ===== FOOTER (Auto Loaded) ===== -->
+  <!-- ===== FOOTER (Loaded Dynamically) ===== -->
   <div id="footer"></div>
 
-  <!-- ===== COMMON JS ===== -->
+  <!-- ===== LOAD HEADER & FOOTER ===== -->
   <script>
-    // Inject header and footer
+    // Load header
     fetch('/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-
-        // Once header is loaded, add menu toggle functionality
-        const menuToggle = document.querySelector('#menuToggle');
-        const topMenu = document.querySelector('.menu');
-        const header = document.querySelector('header');
-
-        if (menuToggle && topMenu) {
-          menuToggle.addEventListener('click', () => {
-            topMenu.classList.toggle('show');
-          });
-        }
-
-        // Optional scroll effect for header (if desired)
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 20) {
-            header.classList.add('scrolled');
-          } else {
-            header.classList.remove('scrolled');
-          }
-        });
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header').innerHTML = html;
       });
 
+    // Load footer
     fetch('/footer.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('footer').innerHTML = data);
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+      });
   </script>
 </body>
 </html>
