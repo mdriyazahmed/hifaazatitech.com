@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Incident Response Playbook | Hifaazati Technologies</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <!-- Shared Header -->
+  <div data-include="/header.html"></div>
+
+  <main class="container guide">
+    <nav class="breadcrumb">
+      <a href="/index.html">Home</a> ›
+      <a href="/Knowledge%20Base/tutorials/tutorials.html">Tutorials</a> ›
+      <a href="/Knowledge%20Base/tutorials/guides/guides.html">Guides</a> ›
+      <span>Incident Response Playbook</span>
+    </nav>
+
+    <header class="hero">
+      <h1>Incident Response Playbook</h1>
+      <p class="subtitle">End‑to‑end operational guide for preparing, detecting, containing, eradicating, and recovering from security incidents.</p>
+      <div class="meta">
+        <span>Version: 1.0</span>
+        <span>Last updated: 2025‑10‑19</span>
+        <span>Author: Hifaazati Technologies</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn" href="#downloadables">Download resources</a>
+        <a class="btn alt" href="/Knowledge%20Base/tutorials/guides/siem-deployment-guide.md">Related: SIEM Deployment</a>
+      </div>
+    </header>
+
+    <aside class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#lifecycle">IR Lifecycle</a></li>
+        <li><a href="#roles">Roles & RACI</a></li>
+        <li><a href="#playbooks">Playbooks by Scenario</a></li>
+        <li><a href="#procedures">Standard Procedures</a></li>
+        <li><a href="#automation">Automation & Runbooks</a></li>
+        <li><a href="#telemetry">Telemetry & Detection Rules</a></li>
+        <li><a href="#communications">Communications</a></li>
+        <li><a href="#forensics">Forensics & Evidence</a></li>
+        <li><a href="#tables">Response Matrices</a></li>
+        <li><a href="#checklists">Checklists</a></li>
+        <li><a href="#code">Code Samples</a></li>
+        <li><a href="#diagrams">Diagrams</a></li>
+        <li><a href="#downloadables">Downloadables</a></li>
+        <li><a href="#related">Related Guides</a></li>
+      </ol>
+    </aside>
+
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>Effective incident response (IR) minimizes business impact by combining preparation, rapid detection, controlled containment, thorough eradication, and resilient recovery. This playbook provides a pragmatic, tooling‑agnostic approach aligned to NIST 800‑61r2 and ISO/IEC 27035, customized for modern cloud‑first environments.</p>
+      <ul>
+        <li>Scope: enterprise endpoints, servers, network, SaaS, IaaS, PaaS, and OT where applicable.</li>
+        <li>Assumptions: centralized logging, ticketing, asset inventory, CMDB, EDR, SIEM, and basic SOAR capabilities.</li>
+        <li>Outcomes: consistent triage, clear decision gates, audit‑ready documentation, and measurable MTTA/MTTR improvements.</li>
+      </ul>
+    </section>
+
+    <section id="lifecycle">
+      <h2>Incident Response Lifecycle</h2>
+      <ol>
+        <li><strong>Preparation</strong>: Policies, contacts, tools, tabletop exercises, and baselines.</li>
+        <li><strong>Detection & Analysis</strong>: Alert intake, triage, enrichment, severity assignment.</li>
+        <li><strong>Containment</strong>: Short‑term isolation and long‑term control changes.</li>
+        <li><strong>Eradication</strong>: Root cause removal, patching, and hardening.</li>
+        <li><strong>Recovery</strong>: Restore services, monitor for recurrence, stakeholder signoff.</li>
+        <li><strong>Lessons Learned</strong>: Post‑incident review, corrective actions, control validation.</li>
+      </ol>
+      <pre><code># Example lifecycle KPI targets
+MTTA: &lt;= 10 minutes (P1), &lt;= 30 minutes (P2)
+MTTR: &lt;= 4 hours (P1), &lt;= 1 business day (P2)
+Containment SLA: 30–60 minutes (P1)
+</code></pre>
+    </section>
+
+    <section id="roles">
+      <h2>Roles and RACI</h2>
+      <table class="table">
+        <thead>
+          <tr><th>Activity</th><th>IR Lead</th><th>SOC</th><th>IT Ops</th><th>Comms</th><th>Legal</th><th>Owner</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Declare Incident</td><td>R</td><td>A</td><td>C</td><td>I</td><td>I</td><td>IR Lead</td></tr>
+          <tr><td>Contain Host</td><td>A</td><td>R</td><td>C</td><td>I</td><td>I</td><td>SOC</td></tr>
+          <tr><td>Customer Notice</td><td>I</td><td>I</td><td>I</td><td>R</td><td>A</td><td>Legal/Comms</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="playbooks">
+      <h2>Scenario Playbooks</h2>
+      <details open>
+        <summary>Ransomware</summary>
+        <ol>
+          <li>Isolate host via EDR; disable SMB; block C2 domains.</li>
+          <li>Snapshot affected VMs; preserve volatile memory.</li>
+          <li>Identify initial access vector; reset credentials.</li>
+          <li>Restore from known‑good backups; verify integrity.</li>
+          <li>Hunt for lateral movement; monitor shadow copies deletion.</li>
+        </ol>
+      </details>
+      <details>
+        <summary>Business Email Compromise (BEC)</summary>
+        <ol>
+          <li>Force sign‑out; reset MFA; search suspicious inbox rules.</li>
+          <li>eDiscovery for exfil; notify impacted parties per policy.</li>
+          <li>Enable strict DMARC, DKIM, SPF; audit OAuth apps.</li>
+        </ol>
+      </details>
+      <details>
+        <summary>Cloud Key Leakage</summary>
+        <ol>
+          <li>Revoke exposed keys; rotate credentials; review access logs.</li>
+          <li>Quarantine affected workloads; enable least privilege.</li>
+          <li>Scan IaC repos for secrets; enforce pre‑commit hooks.</li>
+        </ol>
+      </details>
+    </section>
+
+    <section id="procedures">
+      <h2>Standard Procedures</h2>
+      <h3>Triage</h3>
+      <ul>
+        <li>Validate alert fidelity with context from asset inventory and threat intel.</li>
+        <li>Assign severity: P1 (active impact), P2 (limited scope), P3 (suspected).</li>
+      </ul>
+      <h3>Containment</h3>
+      <ul>
+        <li>Short‑term: network isolation, account disablement, URL/domain blocks.</li>
+        <li>Long‑term: patches, segmentation, zero‑trust policy updates.</li>
+      </ul>
+      <h3>Recovery</h3>
+      <ul>
+        <li>Restore; validate with checksums; monitor heightened telemetry for 7–14 days.</li>
+      </ul>
+    </section>
+
+    <section id="automation">
+      <h2>Automation & Runbooks</h2>
+      <pre><code class="language-yaml"># SOAR: auto‑isolate endpoint and open ticket
+playbook:
+  trigger: edr.high_severity_alert
+  steps:
+    - action: edr.isolate
+      input: host_id
+    - action: siem.search
+      query: correlation_id
+    - action: ticket.create
+      fields: [summary, severity, owner]
+    - action: notify.slack
+      channel: #ir‑warroom
+</code></pre>
+    </section>
+
+    <section id="telemetry">
+      <h2>Telemetry & Detection Rules</h2>
+      <pre><code class="language-spl">index=edr (process_name=psexec.exe OR command_line="-accepteula")
+| stats count by host, user
+| where count &gt; 5
+</code></pre>
+      <pre><code class="language-sql">-- UEBA example
+SELECT user, COUNT(*) AS anom
+FROM auth_events
+WHERE impossible_travel = true
+GROUP BY user
+HAVING anom &gt;= 2;
+</code></pre>
+    </section>
+
+    <section id="communications">
+      <h2>Communications</h2>
+      <p>Use a pre‑approved war‑room channel and an external comms plan. Maintain a single source of truth via the incident record. Avoid sharing sensitive indicators on email; prefer ticket comments with classification.</p>
+      <table class="table">
+        <thead><tr><th>Audience</th><th>Cadence</th><th>Medium</th><th>Owner</th></tr></thead>
+        <tbody>
+          <tr><td>Execs</td><td>2–4 hours</td><td>Briefing doc</td><td>IR Lead</td></tr>
+          <tr><td>Customers</td><td>As needed</td><td>Formal notice</td><td>Legal/Comms</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="forensics">
+      <h2>Forensics & Evidence Handling</h2>
+      <ul>
+        <li>Follow chain‑of‑custody; timestamp, hash, and label exhibits.</li>
+        <li>Acquire memory, disk, and relevant SaaS audit logs.</li>
+        <li>Use write blockers; store images in encrypted vaults.</li>
+      </ul>
+    </section>
+
+    <section id="tables">
+      <h2>Response Matrices</h2>
+      <table class="table">
+        <thead><tr><th>Severity</th><th>Criteria</th><th>On‑Call</th><th>Escalation</th></tr></thead>
+        <tbody>
+          <tr><td>P1</td><td>Active data loss or outage</td><td>Immediate</td><td>Exec bridge</td></tr>
+          <tr><td>P2</td><td>Contained, limited scope</td><td>15 min</td><td>IR Lead</td></tr>
+          <tr><td>P3</td><td>Suspected activity</td><td>1 hour</td><td>SOC TL</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="checklists">
+      <h2>Checklists</h2>
+      <details open>
+        <summary>First 60 Minutes</summary>
+        <ul>
+          <li>Declare severity and open ticket.</li>
+          <li>Isolate affected assets.</li>
+          <li>Preserve volatile artifacts.</li>
+          <li>Notify stakeholders per RACI.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Lessons Learned</summary>
+        <ul>
+          <li>Identify control gaps and backlog items.</li>
+          <li>Update detections and runbooks.</li>
+          <li>Schedule tabletop covering incident pattern.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section id="code">
+      <h2>Code Samples</h2>
+      <pre><code class="language-python"># Quarantine host via EDR API
+import requests
+API="https://edr.example/api"
+TOKEN="${EDR_TOKEN}"
+
+def isolate(host_id):
+    r = requests.post(f"{API}/isolate", headers={"Authorization": f"Bearer {TOKEN}"}, json={"host": host_id})
+    r.raise_for_status()
+    return r.json()
+</code></pre>
+      <pre><code class="language-bash">#!/usr/bin/env bash
+# Block IOC at edge
+IOC=$1
+curl -s -X POST https://fw/api/block --data "indicator=$IOC" -H "Authorization: Bearer $TOKEN"
+</code></pre>
+    </section>
+
+    <section id="diagrams">
+      <h2>Diagrams</h2>
+      <figure>
+        <img src="/assets/diagrams/ir-lifecycle.png" alt="Incident Response Lifecycle" />
+        <figcaption>Figure: IR Lifecycle and decision gates.</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/diagrams/soar-playbook.png" alt="SOAR Playbook Flow" />
+        <figcaption>Figure: Automated isolation and notification flow.</figcaption>
+      </figure>
+    </section>
+
+    <section id="downloadables">
+      <h2>Downloadable Resources</h2>
+      <ul>
+        <li><a href="/assets/documents/IR-Postmortem-Template.docx" download>Post‑incident review template</a></li>
+        <li><a href="/assets/documents/IR-Warroom-Checklist.xlsx" download>War‑room checklist</a></li>
+        <li><a href="/assets/documents/Forensic-Acquisition-Form.pdf" download>Forensic acquisition form</a></li>
+      </ul>
+    </section>
+
+    <section id="related">
+      <h2>Related Guides</h2>
+      <ul>
+        <li><a href="/Knowledge%20Base/tutorials/guides/guides.html#soc-operations-model">SOC Operations Model</a></li>
+        <li><a href="/Knowledge%20Base/tutorials/guides/guides.html#threat-hunting">Threat Hunting</a></li>
+        <li><a href="/Knowledge%20Base/tutorials/guides/guides.html#forensics">Forensics</a></li>
+        <li><a href="/Knowledge%20Base/tutorials/guides/guides.html#cloud-security">Cloud Security</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <div data-include="/footer.html"></div>
+
+  <script>
+  // Lightweight client‑side include for shared header/footer if server‑side includes not available
+  document.querySelectorAll('[data-include]').forEach(async el => {
+    try {
+      const res = await fetch(el.getAttribute('data-include'));
+      if (res.ok) el.innerHTML = await res.text();
+    } catch (e) { /* no‑op */ }
+  });
+  </script>
+</body>
+</html>
